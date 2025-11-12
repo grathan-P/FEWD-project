@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  
 }
 
 body {
@@ -63,6 +64,20 @@ body {
   line-height: 40px;
 }
 
+.logout a {
+  text-decoration: none;
+  color: #fff;
+  background: #7c3aed;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.logout a:hover {
+  background: #5b21b6;
+}
+
 /*===== Middle Man ======*/
 .middle-man{
   display: flex;
@@ -83,6 +98,8 @@ body {
   padding-top: 20px;
   overflow: hidden;
 }
+
+
 
 .sidebar:hover {
   width: 220px;
@@ -114,6 +131,22 @@ body {
   background: rgba(109, 40, 217, 0.2);
   color: #fff;
   box-shadow: 0 0 10px rgba(109, 40, 217, 0.4);
+}
+
+.sidebar li.Timetable a{
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+}
+
+.sidebar li a span{
+  margin-left: 20px;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.sidebar li a i{
+  font-size: 20px;
 }
 
 .sidebar li i {

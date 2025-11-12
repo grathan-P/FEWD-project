@@ -1,16 +1,11 @@
-// home.js - combined original + updates
-
-// Select the main buttons
 const enterBtn = document.getElementsByClassName('primary')[0];
 const viewBtn = document.getElementsByClassName('secondary')[0];
 
-// Create the USN input (reused)
 const input = document.createElement('input');
 input.type = 'text';
 input.placeholder = 'Enter Student USN';
 input.classList.add('usn-input');
 
-// Create student container and inner columns (no inline CSS; styling in home.css)
 const studentContainer = document.createElement('div');
 studentContainer.classList.add('student-container');
 
