@@ -67,73 +67,95 @@ body {
     justify-content: space-around;
   margin-left: 50px;
   margin-right: 100px;
-  margin-top: 100px;
+  margin-top: 90px;
   padding: 40px;
   flex: 1;
   text-align: center;
   animation: fadeIn 1.2s ease;
 }
 
-.login-teacher {
-    background: rgba(15, 23, 42, 0.85);
-    box-shadow: 0 0 20px rgba(109, 40, 217, 0.1);
-    color : white;
-    width: 400px;
-    margin : 110px auto;
-    padding : 20px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-radius: 50px;;
+
+/* Central content */
+.help-container {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
 }
 
-.login-teacher h1 {
-    margin-bottom: 15px;
-    font-size: 35px;
+.help-container h1 {
+  font-size: 2.4rem;
+  color: #a78bfa;
+  margin-bottom: 10px;
 }
 
-.login-teacher p {
-    margin-bottom: 25px;
-    font-size: 16px;
-    color: rgb(100, 100, 229);
+.help-intro {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin-bottom: 40px;
 }
 
-.login-teacher input{
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 10px;
+/* Dropdown styling */
+.help-dropdowns details {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 0 20px;
+  color: #d1d5db;
+  transition: all 0.3s ease;
 }
 
-.btn {
-  padding: 12px 25px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
+.help-dropdowns details:hover {
+  border-color: #7c3aed;
+  box-shadow: 0 0 10px rgba(124, 58, 237, 0.3);
+}
+
+/* Summary (clickable title) */
+.help-dropdowns summary {
   font-weight: 600;
-  transition: 0.3s;
-}
-
-.login {
-  background: rgb(42, 165, 142);
-  color: white;
-  margin-top: 10px;
-  margin-bottom: 55px;
-}
-
-.login:hover {
-  transform: scale(1.05);
-}
-
-.sigin {
-  background: rgba(150, 145, 155, 0.744);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 15px 0;
+  list-style: none;
   color: #fff;
-  border: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s ease;
 }
 
-.sigin:hover {
-  background: rgba(255,255,255,0.2);
+.help-dropdowns summary:hover {
+  color: #a78bfa;
+}
+
+/* Paragraph inside details */
+.help-dropdowns p {
+  padding: 10px 0 20px;
+  margin: 0;
+  color: #cbd5e1;
+  line-height: 1.6;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Link style */
+.help-dropdowns a {
+  color: #7c3aed;
+  text-decoration: none;
+}
+
+.help-dropdowns a:hover {
+  text-decoration: underline;
+}
+
+/* Optional icon spacing */
+.help-dropdowns i {
+  color: #a78bfa;
+  width: 20px;
+  text-align: center;
+}
+
+.teacher-illustration img {
+  margin-top: 150px;
 }
 
 

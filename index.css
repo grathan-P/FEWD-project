@@ -131,18 +131,45 @@ body {
 }
 
 
-.sigin {
-  background: rgba(150, 145, 155, 0.744);
-  color: #fff;
-  border: 1px solid rgba(255,255,255,0.2);
+/* ===== Help Icon Style ===== */
+.help-icon {
+  font-size: 20px;
+  color: #a78bfa;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.sigin a{
-  color: white;
+.help-icon:hover {
+  color: #7c3aed;
+  transform: scale(1.1);
+  text-shadow: 0 0 10px rgba(124, 58, 237, 0.7);
 }
-.sigin:hover {
-  background: rgba(255,255,255,0.2);
+
+/* ===== Help Popup (hidden by default) ===== */
+.help-popup {
+  background: rgba(15, 23, 42, 0.95);
+  color: #e2e8f0;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.4);
+  border: 1px solid rgba(167, 139, 250, 0.4);
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
 }
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 
 /* ===== FOOTER ===== */

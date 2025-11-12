@@ -8,7 +8,7 @@
 
   <title>Signin - Teacher Portal</title>
 
-  <link rel="stylesheet" href="signin.css" />
+  <link rel="stylesheet" href="helpindex.css" />
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -30,22 +30,64 @@
 
   <!-- Main Content -->
   <main class="content">
-    <div class="login-teacher">
-        <h1>Teacher Signin Portal</h1>
-        <p>Access your teaching resources and manage your classes efficiently.</p>
-        <div>
-        <form action="home.html">
-            <input type="text" placeholder="Enter your ID" required>
-            <input type="password" placeholder="Enter your Password" required>
-            </div>
-            <div class="buttons">
-      <button type="submit" class="btn login">Log In</button>
-      <button type="reset" class="btn reset"><i class="fa-solid fa-recycle"></i></button>
-      </div>
-      <p> Don't have an Account? <a href="signin.html">Sign In</a></p>
-      </form>
+    
+    <section class="help-section">
+    <div class="help-container">
+      <h1>Need Help? </h1>
+      <p class="help-intro">
+        Here’s everything you need to get started with your Teacher Dashboard.
+        Choose a topic below to view details and guidance.
+      </p>
 
+      <div class="help-dropdowns">
+        <details>
+          <summary><i class="fa fa-key"></i> How do I log in?</summary>
+          <p>
+            Go to the homepage and click the <strong>Login</strong> button on the top-right. 
+            Enter your official <strong>college email</strong> and 
+            <strong>password</strong> provided by the admin.  
+            If you face issues, contact the IT team.
+          </p>
+        </details>
+
+        <details>
+          <summary><i class="fa fa-calendar"></i> How can I view my attendance records?</summary>
+          <p>
+            From the dashboard, click on <strong>Attendance</strong> in the left sidebar. 
+            You can view your attendance summary, mark entries, and download reports.
+          </p>
+        </details>
+
+        <details>
+          <summary><i class="fa fa-clock"></i> How do I manage my Time Table?</summary>
+          <p>
+            Go to the <strong>Time Table</strong> section from the sidebar. You can add, edit, or 
+            remove class schedules. Ensure you click “Save” after each update.
+          </p>
+        </details>
+
+        <details>
+          <summary><i class="fa fa-bullhorn"></i> Where can I see announcements?</summary>
+          <p>
+            All recent college or department announcements appear under 
+            <strong>Announcements</strong> in your sidebar menu. 
+            You can filter them by date or type.
+          </p>
+        </details>
+
+        <details>
+          <summary><i class="fa fa-question-circle"></i> I still need help!</summary>
+          <p>
+            If your issue isn’t listed, reach out directly:<br><br>
+            📞 <strong>+91 8258 281039</strong><br>
+            📧 <a href="mailto:principal_nmamit@nitte.edu.in">principal_nmamit@nitte.edu.in</a><br>
+            🕒 Available: Monday–Saturday, 9 AM – 4 PM
+          </p>
+        </details>
+      </div>
     </div>
+  </section>
+
     <div class="techer-illustration">
         <img src="images/signin1.png" alt="Teacher Illustration" width="400px" >
     </div>
@@ -98,6 +140,8 @@
 
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="helpindex.js"></script>
+
 
 
 </body>
