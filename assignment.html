@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Assignments - Teacher Portal</title>
+
+  <!-- main site CSS (keeps sidebar/topnav consistent) -->
+  <link rel="stylesheet" href="home.css" />
+
+  <!-- page-specific CSS -->
+  <link rel="stylesheet" href="assignment.css" />
+</head>
+<body>
+  <!-- Top nav (reuses structure from home.html) -->
+  <nav class="top-nav">
+    <div class="college-logo"><img src="images/nitteLogo.png" alt="NMAMIT"></div>
+    <div class="nav-right">
+      <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+      <div class="profile"><i class="fa-solid fa-user"></i></div>
+    </div>
+  </nav>
+
+  <main class="assignment-page">
+    <header class="assign-header">
+      <h2>Assignments</h2>
+      <a class="back-link" href="home.html">← Back to Home</a>
+    </header>
+
+    <section id="studentBanner" class="student-banner" aria-live="polite">
+      <img id="studentImg" src="images/default.png" alt="Student" />
+      <div>
+        <div id="studentName" class="student-name">Student Name</div>
+        <div id="studentUSN" class="student-usn">USN: -</div>
+        <div id="studentCourse" class="student-course"></div>
+      </div>
+    </section>
+
+    <div class="two-col">
+      <!-- Left: assignment list -->
+      <div class="assign-list">
+        <h3 class="list-title">Assigned (shared)</h3>
+        <div id="assignmentsContainer" aria-live="polite"></div>
+      </div>
+
+      <!-- Right: controls -->
+      <aside class="assign-controls" aria-label="Add assignment">
+        <h3>Add Assignment</h3>
+
+        <div class="form-row">
+          <label for="aTitle">Title</label>
+          <input id="aTitle" type="text" placeholder="Assignment Title" />
+        </div>
+
+        <div class="form-row">
+          <label for="aDesc">Description</label>
+          <textarea id="aDesc" placeholder="Assignment description"></textarea>
+        </div>
+
+        <div class="form-row">
+          <label for="aDue">Due Date</label>
+          <input id="aDue" type="date" />
+        </div>
+
+        <div class="controls-row">
+          <button id="addAssignBtn" class="btn assignment-btn">Add Assignment</button>
+          <button id="clearAssignBtn" class="btn attendance-btn">Clear All</button>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="assignment.js"></script>
+  <!-- Font Awesome (icons) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
