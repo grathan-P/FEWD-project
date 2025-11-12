@@ -1,0 +1,20 @@
+# Ignore OS / editor cruft
+Thumbs.db
+*.log
+.DS_Store
+
+# Node / build artifacts (in case you add tooling later)
+node_modules/
+dist/
+.build/
+.tmp/
+
+# Environment / config
+.env
+.env.*
+
+# VS Code settings
+.vscode/
+
+# GitHub pages cache (if any future tooling)
+.cache/
