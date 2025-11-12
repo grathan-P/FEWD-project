@@ -9,7 +9,6 @@
 body {
   background: radial-gradient(circle at top, #0f172a, #000);
   color: #fff;
-  /* display: flex; */
   min-height: 100vh;
 }
 
@@ -26,6 +25,7 @@ body {
   align-items: center;
   padding: 0 30px;
   border-bottom: 1px solid rgba(255,255,255,0.1);
+  z-index: 50;
 }
 
 .college-logo {
@@ -36,6 +36,7 @@ body {
 .college-logo img {
   width: 200px;
   height: 40px;
+  object-fit: contain;
 }
 
 .nav-right {
@@ -52,22 +53,21 @@ body {
   cursor: pointer;
 }
 
-.profile img {
+.profile i, .profile img {
   width: 40px;
   height: 40px;
+  display: inline-block;
   border-radius: 50%;
   border: 2px solid #6d28d9;
+  text-align: center;
+  line-height: 40px;
 }
 
-
-/*=====Middle Man ======*/
-
+/*===== Middle Man ======*/
 .middle-man{
   display: flex;
-  /* margin-top: 10%; */
-  margin-bottom:20px ;
+  margin-bottom: 20px;
 }
-
 
 /* ===== SIDEBAR ===== */
 .sidebar {
@@ -118,16 +118,12 @@ body {
 
 .sidebar li i {
   font-size: 20px;
-  display: block;
 }
 
 .sidebar li span {
-  display: block;
   font-size: 12px;
   margin-top: 5px;
 }
-
-
 
 /* ===== MAIN CONTENT ===== */
 .content {
@@ -142,7 +138,7 @@ body {
 .content h2 {
   font-size: 36px;
   background: linear-gradient(90deg, #8b5cf6, #60a5fa);
-    -webkit-background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 15px;
 }
@@ -166,6 +162,7 @@ body {
   cursor: pointer;
   font-weight: 600;
   transition: 0.3s;
+  font-size: 14px;
 }
 
 .primary {
@@ -187,8 +184,7 @@ body {
   background: rgba(255,255,255,0.2);
 }
 
-/* ===== Input Box (Appears after click) ===== */
-/* ===== Fancy USN Input Box ===== */
+/* ===== Input Box ===== */
 .usn-input {
   padding: 14px 20px;
   border: 2px solid rgba(167, 139, 250, 0.4);
@@ -196,47 +192,31 @@ body {
   outline: none;
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
-  background: rgba(255, 255, 255, 0.05); /* glassy effect */
+  background: rgba(255, 255, 255, 0.05);
   color: #ffffff;
   width: 230px;
   transition: all 0.4s ease;
   box-shadow: 0 0 10px rgba(124, 58, 237, 0.1);
-  backdrop-filter: blur(6px); /* frosted glass */
+  backdrop-filter: blur(6px);
   animation: fadeIn 0.4s forwards;
 }
 
-/* Placeholder style */
 .usn-input::placeholder {
   color: #a78bfa;
   opacity: 0.7;
   letter-spacing: 0.5px;
 }
 
-/* When focused */
 .usn-input:focus {
   border-color: #7c3aed;
   box-shadow: 0 0 20px rgba(124, 58, 237, 0.6),
               0 0 40px rgba(59, 130, 246, 0.4);
   background: rgba(255, 255, 255, 0.1);
-  width: 280px; /* expands smoothly */
+  width: 280px;
   transform: scale(1.03);
 }
 
-/* Add a smooth fade-in animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-
 /* ===== FOOTER ===== */
-
 .footer {
   width: 100%;
   background: radial-gradient(circle at top, #0f172a, #000);
@@ -246,7 +226,6 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Columns layout */
 .footer-container {
   width: 90%;
   max-width: 1200px;
@@ -270,12 +249,10 @@ body {
   margin-bottom: 15px;
   border-bottom: 2px solid rgba(167, 139, 250, 0.3);
   padding-bottom: 6px;
-  display: inline-block;
 }
 
 .footer-column ul {
   list-style: none;
-  padding: 0;
 }
 
 .footer-column ul li {
@@ -303,7 +280,6 @@ body {
   margin-right: 8px;
 }
 
-/* Social icons */
 .social-icons {
   display: flex;
   gap: 15px;
@@ -324,7 +300,6 @@ body {
   transform: translateY(-3px);
 }
 
-/* Footer bottom */
 .footer-bottom {
   text-align: center;
   margin-top: 40px;
@@ -343,26 +318,130 @@ body {
   text-decoration: underline;
 }
 
-/* Responsive footer */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .social-icons {
-    justify-content: center;
-  }
-}
-
 /* ===== ANIMATION ===== */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* ===== STUDENT DISPLAY SECTION ===== */
+.student-container {
+  display: none;              /* toggled by JS */
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;                /* space between image and info — adjust as needed */
+  animation: fadeIn 0.8s ease;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+
+/* Image column */
+.student-image {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.student-image img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(124, 58, 237, 0.4);
+  border: 2px solid rgba(167, 139, 250, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.student-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Info column */
+.student-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  line-height: 30px;
+  max-width: 560px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.student-info h3 {
+  color: #a78bfa;
+  font-size: 22px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.student-info p {
+  color: #cbd5e1;
+  font-size: 16px;
+  margin: 3px 0;
+}
+
+/* ===== STUDENT ACTION BUTTONS ===== */
+.student-action-buttons {
+  margin-top: 18px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.student-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.assignment-btn {
+  background: linear-gradient(90deg, #8b5cf6, #3b82f6);
+  color: white;
+}
+
+.assignment-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(124, 58, 237, 0.6);
+}
+
+.attendance-btn {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.attendance-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+  transform: scale(1.05);
+}
+
+/* Small tweak to align buttons when info column is narrow */
+.student-info .student-action-buttons {
+  align-items: center;
+}
+
 /* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .student-container {
+    gap: 60px;
+    padding: 8px 12px;
+  }
+
+  .student-image img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
 @media (max-width: 768px) {
   .sidebar {
     width: 60px;
@@ -372,5 +451,34 @@ body {
   }
   .content {
     margin-left: 80px;
+    padding: 24px;
   }
+
+  /* stack the image and info vertically on small screens */
+  .student-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 18px;
+    justify-content: center;
+  }
+
+  .student-info {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .student-info p {
+    font-size: 15px;
+  }
+
+  .student-action-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .usn-input { width: 200px; }
+  .student-image img { width: 150px; height: 150px; }
+  .student-info h3 { font-size: 18px; }
+  .student-info p { font-size: 14px; }
 }
