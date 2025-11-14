@@ -25,7 +25,7 @@ studentContainer.appendChild(infoDiv);
 
 // --- Simulated student data (replace with server call later) ---
 const studentData = {
-  '4NM21CS001': { name: 'Riya Sharma', img: 'images/student1.png', course: 'B.Tech', branch: 'Computer Science' },
+  '1': { name: 'Riya Sharma', img: 'images/student1.png', course: 'B.Tech', branch: 'Computer Science' },
   '4NM21CS002': { name: 'Arjun Kumar', img: 'images/student1.png', course: 'B.Tech', branch: 'Information Technology' },
   '4NM21CS003': { name: 'Sneha Patil', img: 'images/student1.png', course: 'B.Tech', branch: 'Electronics and Communication' }
 };
