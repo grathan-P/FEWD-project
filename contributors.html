@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Contributors - Teacher Portal</title>
+
+	<link rel="stylesheet" href="contributors.css" />
+
+	<!-- Apply theme before page renders to prevent flash -->
+	<script>
+		(function() {
+			const theme = localStorage.getItem('site_theme') || 'dark';
+			if (theme === 'light') {
+				document.documentElement.classList.add('light-theme');
+			}
+		})();
+	</script>
+
+	<!-- Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+	<!-- Top Navbar -->
+	<nav class="top-nav">
+		<div class="college-logo">
+			<img src="images/nitteLogo.png" alt="NMAMIT Logo">
+		</div>
+		<div class="nav-right">
+			<button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+			<div class="profile">
+				<i class="fa-solid fa-user"></i>
+			</div>
+			<button class="logout"><a href="index.html">Log Out</a></button>
+		</div>
+	</nav>
+
+	<div class="middle-man">
+	<!-- Sidebar -->
+	<aside class="sidebar">
+		<ul>
+			<li class="Home"><a href="home.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+			<li class="Timetable"><a href="timetable.html"><i class="fas fa-calendar-alt"></i><span>Time Table</span></a></li>
+			<li class="Attendance"><i class="fas fa-user-check"></i><span>Attendance</span></li>
+			<li class="Announcements"><i class="fas fa-bullhorn"></i><span>Announcements</span></li>
+			<li class="Contributors"><a href="#"><i class="fa-solid fa-people-group"></i><span>Contributors</span></a></li>
+			<li class="Help"><a href="help.html"><i class="fas fa-question-circle"></i><span>Help / Support</span></a></li>
+		</ul>
+	</aside>
+
+	<!-- Main Content -->
+	<main class="content">
+		<section class="contributors-section">
+			<h1>Our Contributors</h1>
+			<p class="intro">Meet the team behind this project.</p>
+
+			<div class="cards">
+				<!-- Card 1 -->
+				<article class="card">
+					<div class="avatar"><img src="images/student1.png" alt="Member One"></div>
+					<h3>Member One</h3>
+					<p class="meta">Branch: CSE · Sem: 3</p>
+					<div class="socials">
+						<a href="#" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+						<a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+						<a href="#" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+						<a href="#" aria-label="Twitter" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+					</div>
+				</article>
+
+				<!-- Card 2 -->
+				<article class="card">
+					<div class="avatar"><img src="images/student1.png" alt="Member Two"></div>
+					<h3>Member Two</h3>
+					<p class="meta">Branch: CSE · Sem: 3</p>
+					<div class="socials">
+						<a href="#" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+						<a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+						<a href="#" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+						<a href="#" aria-label="Twitter" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+					</div>
+				</article>
+
+				<!-- Card 3 -->
+				<article class="card">
+					<div class="avatar"><img src="images/student1.png" alt="Member Three"></div>
+					<h3>Member Three</h3>
+					<p class="meta">Branch: CSE · Sem: 3</p>
+					<div class="socials">
+						<a href="#" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+						<a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+						<a href="#" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+						<a href="#" aria-label="Twitter" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+					</div>
+				</article>
+
+				<!-- Card 4 -->
+				<article class="card">
+					<div class="avatar"><img src="images/student1.png" alt="Member Four"></div>
+					<h3>Member Four</h3>
+					<p class="meta">Branch: CSE · Sem: 3</p>
+					<div class="socials">
+						<a href="#" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+						<a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+						<a href="#" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+						<a href="#" aria-label="Twitter" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+					</div>
+				</article>
+			</div>
+		</section>
+	</main>
+	</div>
+
+	<!-- footer outside -->
+<footer class="footer">
+	<div class="footer-container">
+		<!-- About Section -->
+		<div class="footer-column">
+			<h2>About Us</h2>
+			<ul>
+				<li><a href="https://nitte.edu.in/nmamit/about-nmamit-nitte.php" target="_blank">About NMAMIT</a></li>
+				<li><a href="https://nitte.edu.in/nmamit/vision-mission.php" target="_blank">Vision, Mission & Core Values</a></li>
+				<li><a href="https://nitte.edu.in/nmamit/vision-mission.php#core" target="_blank">Quality Policy</a></li>
+				<li><a href="https://nitte.edu.in/nmamit/rules.php" target="_blank">Rules & Regulations</a></li>
+				<li><a href="https://nitte.edu.in/nmamit/admissions.php" target="_blank">Admission</a></li>
+			</ul>
+		</div>
+
+		<!-- Contact Section -->
+		<div class="footer-column">
+			<h2>Contact Us</h2>
+			<p>NMAM Institute of Technology, Nitte,<br>
+				 Karkala Taluk, Udupi-574110,<br>
+				 Karnataka, India.</p>
+			<p><i class="fas fa-phone"></i> +91 8258 281039</p>
+			<p><i class="fas fa-envelope"></i>
+				<a href="mailto:principal_nmamit@nitte.edu.in">principal_nmamit@nitte.edu.in</a>
+			</p>
+		</div>
+
+		<!-- Social Media -->
+		<div class="footer-column">
+			<h2>Follow Us</h2>
+			<div class="social-icons">
+				<a href="https://twitter.com/nmamitnitte" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+				<a href="https://www.facebook.com/NMAMITsince1986" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+				<a href="https://www.youtube.com/c/NMAMInstituteofTechnology" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+				<a href="https://www.instagram.com/nmamit_nitte" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer-bottom">
+		<p>© 2025 NMAMIT College | Powered by <a href="https://moodle.org" target="_blank">Moodle</a></p>
+	</div>
+</footer>
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script>
+	// Theme toggle functionality
+	const THEME_KEY = 'site_theme';
+
+	function applyTheme(theme) {
+		if (theme === 'light') {
+			document.documentElement.classList.add('light-theme');
+			const btn = document.getElementById('theme-toggle');
+			if (btn) btn.innerHTML = '<i class="fas fa-sun"></i>';
+		} else {
+			document.documentElement.classList.remove('light-theme');
+			const btn = document.getElementById('theme-toggle');
+			if (btn) btn.innerHTML = '<i class="fas fa-moon"></i>';
+		}
+	}
+
+	function loadTheme() {
+		const t = localStorage.getItem(THEME_KEY) || 'dark';
+		applyTheme(t);
+	}
+
+	function toggleTheme() {
+		const current = localStorage.getItem(THEME_KEY) || 'dark';
+		const next = current === 'dark' ? 'light' : 'dark';
+		localStorage.setItem(THEME_KEY, next);
+		applyTheme(next);
+	}
+
+	document.addEventListener('DOMContentLoaded', () => {
+		const themeBtn = document.getElementById('theme-toggle');
+		if (themeBtn) {
+			themeBtn.addEventListener('click', () => {
+				toggleTheme();
+			});
+		}
+		loadTheme();
+	});
+</script>
+
+</body>
+</html>

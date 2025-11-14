@@ -228,6 +228,24 @@ body {
   display: flex;
 }
 
+.sidebar li.Contributors a{
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+}
+
+.sidebar li.Attendance a{
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+}
+
+.sidebar li.Announcements a{
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+}
+
 .sidebar li.Help a{
   color: inherit;
   text-decoration: none;
