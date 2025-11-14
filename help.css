@@ -48,39 +48,39 @@ body {
 }
 
 .light-theme .sidebar li:hover,
-.light-theme .sidebar li.Home {
+.light-theme .sidebar li.Help {
   background: rgba(124, 58, 237, 0.15) !important;
   color: #1e293b !important;
 }
 
-.light-theme .content h2 {
-  background: linear-gradient(90deg, #7c3aed, #3b82f6);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+.light-theme .help-container h1 {
+  color: #7c3aed !important;
 }
 
-.light-theme .content p {
+.light-theme .help-intro {
   color: #475569 !important;
 }
 
-.light-theme .usn-input {
-  background: rgba(124, 58, 237, 0.05) !important;
-  color: #1e293b !important;
+.light-theme .help-dropdowns details {
+  background: rgba(255, 255, 255, 0.8) !important;
   border-color: rgba(124, 58, 237, 0.3) !important;
 }
 
-.light-theme .usn-input::placeholder {
-  color: #7c3aed !important;
-  opacity: 0.6;
+.light-theme .help-dropdowns summary {
+  color: #1e293b !important;
 }
 
-.light-theme .student-info h3 {
+.light-theme .help-dropdowns summary:hover {
   color: #7c3aed !important;
 }
 
-.light-theme .student-info p {
+.light-theme .help-dropdowns p {
   color: #475569 !important;
+  border-top-color: rgba(0,0,0,0.1) !important;
+}
+
+.light-theme .help-dropdowns i {
+  color: #7c3aed !important;
 }
 
 .light-theme .footer {
@@ -222,13 +222,19 @@ body {
 }
 
 .sidebar li:hover,
-.sidebar li.Home {
+.sidebar li.Help {
   background: rgba(109, 40, 217, 0.2);
   color: #fff;
   box-shadow: 0 0 10px rgba(109, 40, 217, 0.4);
 }
 
 .sidebar li.Timetable a{
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+}
+
+.sidebar li.Help a{
   color: inherit;
   text-decoration: none;
   display: flex;
@@ -258,97 +264,6 @@ body {
 .sidebar li span {
   font-size: 12px;
   margin-top: 5px;
-}
-
-/* ===== MAIN CONTENT ===== */
-.content {
-  margin-left: 120px;
-  margin-top: 100px;
-  padding: 40px;
-  flex: 1;
-  text-align: center;
-  animation: fadeIn 1.2s ease;
-}
-
-.content h2 {
-  font-size: 36px;
-  background: linear-gradient(90deg, #8b5cf6, #60a5fa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 15px;
-}
-
-.content p {
-  color: #cbd5e1;
-  font-size: 16px;
-  margin-bottom: 30px;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.btn {
-  padding: 12px 25px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.3s;
-  font-size: 14px;
-}
-
-.primary {
-  background: linear-gradient(90deg, #7c3aed, #3b82f6);
-  color: white;
-}
-
-.primary:hover {
-  transform: scale(1.05);
-}
-
-.secondary {
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  border: 1px solid rgba(255,255,255,0.2);
-}
-
-.secondary:hover {
-  background: rgba(255,255,255,0.2);
-}
-
-/* ===== Input Box ===== */
-.usn-input {
-  padding: 14px 20px;
-  border: 2px solid rgba(167, 139, 250, 0.4);
-  border-radius: 10px;
-  outline: none;
-  font-size: 16px;
-  font-family: 'Poppins', sans-serif;
-  background: rgba(255, 255, 255, 0.05);
-  color: #ffffff;
-  width: 230px;
-  transition: all 0.4s ease;
-  box-shadow: 0 0 10px rgba(124, 58, 237, 0.1);
-  backdrop-filter: blur(6px);
-  animation: fadeIn 0.4s forwards;
-}
-
-.usn-input::placeholder {
-  color: #a78bfa;
-  opacity: 0.7;
-  letter-spacing: 0.5px;
-}
-
-.usn-input:focus {
-  border-color: #7c3aed;
-  box-shadow: 0 0 20px rgba(124, 58, 237, 0.6),
-              0 0 40px rgba(59, 130, 246, 0.4);
-  background: rgba(255, 255, 255, 0.1);
-  width: 280px;
-  transform: scale(1.03);
 }
 
 /* ===== FOOTER ===== */
@@ -460,120 +375,11 @@ body {
 }
 
 /* ===== STUDENT DISPLAY SECTION ===== */
-.student-container {
-  display: none;              /* toggled by JS */
-  margin-top: 30px;
-  justify-content: center;
-  align-items: center;
-  gap: 150px;                /* space between image and info — adjust as needed */
-  animation: fadeIn 0.8s ease;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 10px 20px;
-}
-
-/* Image column */
-.student-image {
-  flex: 0 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.student-image img {
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 0 25px rgba(124, 58, 237, 0.4);
-  border: 2px solid rgba(167, 139, 250, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.student-image img:hover {
-  transform: scale(1.05);
-}
-
-/* Info column */
-.student-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-  line-height: 30px;
-  max-width: 560px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.student-info h3 {
-  color: #a78bfa;
-  font-size: 22px;
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-
-.student-info p {
-  color: #cbd5e1;
-  font-size: 16px;
-  margin: 3px 0;
-}
-
-/* ===== STUDENT ACTION BUTTONS ===== */
-.student-action-buttons {
-  margin-top: 18px;
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.student-btn {
-  padding: 10px 20px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 14px;
-  transition: all 0.3s ease;
-}
-
-.assignment-btn {
-  background: linear-gradient(90deg, #8b5cf6, #3b82f6);
-  color: white;
-}
-
-.assignment-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(124, 58, 237, 0.6);
-}
-
-.attendance-btn {
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
-  border: 1px solid rgba(255,255,255,0.15);
-}
-
-.attendance-btn:hover {
-  background: rgba(255, 255, 255, 0.16);
-  transform: scale(1.05);
-}
-
-/* Small tweak to align buttons when info column is narrow */
-.student-info .student-action-buttons {
-  align-items: center;
-}
-
 /* ===== RESPONSIVE ===== */
 @media (max-width: 992px) {
   .student-container {
     gap: 60px;
     padding: 8px 12px;
-  }
-
-  .student-image img {
-    width: 180px;
-    height: 180px;
   }
 
   /* Responsive top navbar */
@@ -638,34 +444,97 @@ body {
   .top-nav {
     padding: 0 10px;
   }
-  
-  .college-logo img {
-    width: 120px;
-    height: 25px;
-  }
-  
-  .nav-right {
-    gap: 8px;
-  }
-  
-  .theme-btn {
-    font-size: 16px;
-  }
-  
-  .profile i {
-    width: 32px;
-    height: 32px;
-    line-height: 32px;
-    font-size: 14px;
-  }
-  
-  .logout a {
-    padding: 5px 10px;
-    font-size: 12px;
-  }
+}
 
-  .usn-input { width: 200px; }
-  .student-image img { width: 150px; height: 150px; }
-  .student-info h3 { font-size: 18px; }
-  .student-info p { font-size: 14px; }
+/* ===== MAIN CONTENT ===== */
+.content {
+    display: flex;
+    justify-content: space-around;
+  margin-left: 50px;
+  margin-right: 100px;
+  margin-top: 90px;
+  padding: 40px;
+  flex: 1;
+  text-align: center;
+  animation: fadeIn 1.2s ease;
+}
+
+
+/* Central content */
+.help-container {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.help-container h1 {
+  font-size: 2.4rem;
+  color: #a78bfa;
+  margin-bottom: 10px;
+}
+
+.help-intro {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin-bottom: 40px;
+}
+
+/* Dropdown styling */
+.help-dropdowns details {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 0 20px;
+  color: #d1d5db;
+  transition: all 0.3s ease;
+}
+
+.help-dropdowns details:hover {
+  border-color: #7c3aed;
+  box-shadow: 0 0 10px rgba(124, 58, 237, 0.3);
+}
+
+/* Summary (clickable title) */
+.help-dropdowns summary {
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 15px 0;
+  list-style: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+.help-dropdowns summary:hover {
+  color: #a78bfa;
+}
+
+/* Paragraph inside details */
+.help-dropdowns p {
+  padding: 10px 0 20px;
+  margin: 0;
+  color: #cbd5e1;
+  line-height: 1.6;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Link style */
+.help-dropdowns a {
+  color: #7c3aed;
+  text-decoration: none;
+}
+
+.help-dropdowns a:hover {
+  text-decoration: underline;
+}
+
+/* Optional icon spacing */
+.help-dropdowns i {
+  color: #a78bfa;
+  width: 20px;
+  text-align: center;
 }

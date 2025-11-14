@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Teacher Time Table</title>
+  <title>TimeTable - Teacher Portal</title>
   <link rel="stylesheet" href="timetable.css" />
+  
+  <!-- Apply theme before page renders to prevent flash -->
+  <script>
+    (function() {
+      const theme = localStorage.getItem('site_theme') || 'dark';
+      if (theme === 'light') {
+        document.documentElement.classList.add('light-theme');
+      }
+    })();
+  </script>
+  
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -33,8 +44,8 @@
       <li class="Timetable"><a href="#"><i class="fas fa-calendar-alt"></i><span>Time Table</span></a></li>
       <li class="Attendance"><i class="fas fa-user-check"></i><span>Attendance</span></li>
       <li class="Announcements"><i class="fas fa-bullhorn"></i><span>Announcements</span></li>
-      <li class="Settings"><i class="fas fa-cog"></i><span>Settings</span></li>
-      <li class="Help"><i class="fas fa-question-circle"></i><span>Help / Support</span></li>
+      <li class="Settings"><i class="fa-solid fa-people-group"></i><span>Contributors</span></li>
+      <li class="Help"><a href="help.html"><i class="fas fa-question-circle"></i><span>Help / Support</span></a></li>
     </ul>
   </aside>
 
@@ -158,6 +169,45 @@
 
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script>
+  // Theme toggle functionality
+  const THEME_KEY = 'site_theme';
+
+  function applyTheme(theme) {
+    if (theme === 'light') {
+      document.documentElement.classList.add('light-theme');
+      const btn = document.getElementById('theme-toggle');
+      if (btn) btn.innerHTML = '<i class="fas fa-sun"></i>';
+    } else {
+      document.documentElement.classList.remove('light-theme');
+      const btn = document.getElementById('theme-toggle');
+      if (btn) btn.innerHTML = '<i class="fas fa-moon"></i>';
+    }
+  }
+
+  function loadTheme() {
+    const t = localStorage.getItem(THEME_KEY) || 'dark';
+    applyTheme(t);
+  }
+
+  function toggleTheme() {
+    const current = localStorage.getItem(THEME_KEY) || 'dark';
+    const next = current === 'dark' ? 'light' : 'dark';
+    localStorage.setItem(THEME_KEY, next);
+    applyTheme(next);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const themeBtn = document.getElementById('theme-toggle');
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        toggleTheme();
+      });
+    }
+    loadTheme();
+  });
+</script>
 
 </body>
 </html>

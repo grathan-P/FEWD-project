@@ -293,8 +293,149 @@ body {
   }
 }
 
+/* ===== LIGHT THEME ===== */
+.light-theme {
+  background: radial-gradient(circle at top, #e0e7ff, #f8fafc) !important;
+  color: #1e293b !important;
+}
 
+.light-theme body {
+  background: radial-gradient(circle at top, #e0e7ff, #f8fafc);
+  color: #1e293b;
+}
 
+.light-theme .top-nav {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-bottom: 1px solid rgba(0,0,0,0.1) !important;
+}
+
+.light-theme .college-logo img {
+  filter: brightness(0.2);
+}
+
+.light-theme .theme-btn,
+.light-theme .profile i {
+  color: #1e293b !important;
+  border-color: #7c3aed !important;
+}
+
+.light-theme .sidebar {
+  background: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.15) !important;
+}
+
+.light-theme .sidebar li {
+  color: #475569 !important;
+}
+
+.light-theme .sidebar li:hover,
+.light-theme .sidebar li.Timetable {
+  background: rgba(124, 58, 237, 0.15) !important;
+  color: #1e293b !important;
+}
+
+.light-theme .timetable-container h1 {
+  color: #7c3aed !important;
+}
+
+.light-theme .intro {
+  color: #475569 !important;
+}
+
+.light-theme .timetable {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(124, 58, 237, 0.3) !important;
+}
+
+.light-theme .timetable th {
+  background: rgba(124, 58, 237, 0.1) !important;
+  color: #7c3aed !important;
+}
+
+.light-theme .timetable td {
+  color: #1e293b !important;
+  border-color: rgba(0,0,0,0.1) !important;
+}
+
+.light-theme .timetable tr:nth-child(even) {
+  background: rgba(124, 58, 237, 0.03) !important;
+}
+
+.light-theme .footer {
+  background: radial-gradient(circle at top, #e0e7ff, #f8fafc) !important;
+  color: #475569 !important;
+  border-top: 1px solid rgba(0,0,0,0.1) !important;
+}
+
+.light-theme .footer-column h2 {
+  color: #7c3aed !important;
+  border-bottom-color: rgba(124, 58, 237, 0.3) !important;
+}
+
+.light-theme .footer-column p,
+.light-theme .footer-column ul li a {
+  color: #64748b !important;
+}
+
+.light-theme .footer-bottom {
+  color: #64748b !important;
+  border-top-color: rgba(0,0,0,0.1) !important;
+}
+
+.light-theme .footer-bottom a {
+  color: #7c3aed !important;
+}
+
+.light-theme .content h2 {
+  color: #1e293b !important;
+}
+
+.light-theme .content h2 span {
+  color: #7c3aed !important;
+}
+
+.light-theme .content p {
+  color: #475569 !important;
+}
+
+.light-theme .content ul {
+  color: #1e293b !important;
+}
+
+.light-theme .content ul li {
+  color: #475569 !important;
+}
+
+.light-theme .content ul li span {
+  color: #7c3aed !important;
+  font-weight: 600;
+}
+
+.light-theme .help-icon {
+  color: #7c3aed !important;
+}
+
+.light-theme .help-icon:hover {
+  color: #5b21b6 !important;
+}
+
+.light-theme .help-icon a {
+  color: #7c3aed !important;
+}
+
+.light-theme .help-popup {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #1e293b !important;
+  border-color: rgba(124, 58, 237, 0.4) !important;
+}
+
+.light-theme .profile a {
+  color: #1e293b !important;
+}
+
+.light-theme .profile a:hover {
+  color: #7c3aed !important;
+}
 
 /* ===== ANIMATION ===== */
 @keyframes fadeIn {
