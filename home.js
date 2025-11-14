@@ -1,3 +1,44 @@
+// home.js (updated: preserve student via query string and theme toggle)
+
+// --- Theme handling (persisted to localStorage) ---
+const THEME_KEY = 'site_theme';
+
+function applyTheme(theme) {
+  if (theme === 'light') {
+    document.documentElement.classList.add('light-theme');
+    const btn = document.getElementById('theme-toggle');
+    if (btn) btn.innerHTML = '<i class="fas fa-sun"></i>';
+  } else {
+    document.documentElement.classList.remove('light-theme');
+    const btn = document.getElementById('theme-toggle');
+    if (btn) btn.innerHTML = '<i class="fas fa-moon"></i>';
+  }
+}
+
+function loadTheme() {
+  const t = localStorage.getItem(THEME_KEY) || 'dark';
+  applyTheme(t);
+}
+
+function toggleTheme() {
+  const current = localStorage.getItem(THEME_KEY) || 'dark';
+  const next = current === 'dark' ? 'light' : 'dark';
+  localStorage.setItem(THEME_KEY, next);
+  applyTheme(next);
+}
+
+// set up theme button
+document.addEventListener('DOMContentLoaded', () => {
+  const themeBtn = document.getElementById('theme-toggle');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      toggleTheme();
+    });
+  }
+  loadTheme();
+});
+
+// ---------------- existing home.js content (keeps original behavior) ----------------
 const enterBtn = document.getElementsByClassName('primary')[0];
 const viewBtn = document.getElementsByClassName('secondary')[0];
 
@@ -109,6 +150,32 @@ enterBtn.addEventListener('click', () => {
 input.addEventListener('keypress', (e) => {
   if (e.key === 'Enter') {
     renderStudent(input.value);
+    // also update the URL so the state is shareable / persists on refresh or navigation
+    const usn = (input.value || '').trim().toUpperCase();
+    if (usn) {
+      const newUrl = new URL(window.location.href);
+      newUrl.searchParams.set('usn', usn);
+      history.replaceState({}, '', newUrl.toString());
+    }
+  }
+});
+
+// --- New: read ?usn= on load and auto-render if present ---
+function getUSNfromURL() {
+  const params = new URLSearchParams(window.location.search);
+  return (params.get('usn') || '').toUpperCase();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  // if there's a usn in the url, ensure the input is present and filled, then render
+  const usn = getUSNfromURL();
+  if (usn) {
+    // ensure input exists in DOM (so teacher can edit)
+    if (!document.body.contains(input)) {
+      viewBtn.parentNode.insertBefore(input, viewBtn);
+    }
+    input.value = usn;
+    renderStudent(usn);
   }
 });
 
@@ -123,6 +190,13 @@ viewBtn.addEventListener('click', () => {
   if (inputInDom && input.value.trim() !== '') {
     // input exists and has a value -> render directly
     renderStudent(input.value);
+    // update URL to include USN
+    const usn = input.value.trim().toUpperCase();
+    if (usn) {
+      const newUrl = new URL(window.location.href);
+      newUrl.searchParams.set('usn', usn);
+      history.replaceState({}, '', newUrl.toString());
+    }
     return;
   }
 

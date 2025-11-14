@@ -1,4 +1,43 @@
-// assignment.js (updated: includes Delete button handling)
+// assignment.js (updated: theme support + update back-link with usn)
+
+// Theme handling (shared with home.js)
+const THEME_KEY = 'site_theme';
+
+function applyThemeAssign(theme) {
+  if (theme === 'light') {
+    document.documentElement.classList.add('light-theme');
+    const btn = document.getElementById('theme-toggle');
+    if (btn) btn.innerHTML = '<i class="fas fa-sun"></i>';
+  } else {
+    document.documentElement.classList.remove('light-theme');
+    const btn = document.getElementById('theme-toggle');
+    if (btn) btn.innerHTML = '<i class="fas fa-moon"></i>';
+  }
+}
+
+function loadThemeAssign() {
+  const t = localStorage.getItem(THEME_KEY) || 'dark';
+  applyThemeAssign(t);
+}
+
+function toggleThemeAssign() {
+  const current = localStorage.getItem(THEME_KEY) || 'dark';
+  const next = current === 'dark' ? 'light' : 'dark';
+  localStorage.setItem(THEME_KEY, next);
+  applyThemeAssign(next);
+}
+
+// wire theme button early
+document.addEventListener('DOMContentLoaded', () => {
+  const themeBtn = document.getElementById('theme-toggle');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => toggleThemeAssign());
+  }
+  loadThemeAssign();
+});
+
+// ---------------- existing assignment.js content (unchanged logic) ----------------
+
 // Shared assignments + per-student submissions using localStorage
 
 const studentDB = {
@@ -58,6 +97,18 @@ if (!currentUSN) {
     studentCourseEl.textContent = '';
   }
 }
+
+// Update Back link so it returns to home with same USN (if present)
+document.addEventListener('DOMContentLoaded', () => {
+  const backLink = document.querySelector('.back-link');
+  if (backLink) {
+    if (currentUSN) {
+      backLink.href = `home.html?usn=${encodeURIComponent(currentUSN)}`;
+    } else {
+      backLink.href = 'home.html';
+    }
+  }
+});
 
 // unique id for assignments
 function uid() { return 'a_' + Math.random().toString(36).slice(2, 9); }
