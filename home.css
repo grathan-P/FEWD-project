@@ -479,6 +479,25 @@ body {
     width: 180px;
     height: 180px;
   }
+
+  /* Responsive top navbar */
+  .top-nav {
+    padding: 0 15px;
+  }
+  
+  .college-logo img {
+    width: 150px;
+    height: 30px;
+  }
+  
+  .nav-right {
+    gap: 12px;
+  }
+  
+  .logout a {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -520,6 +539,35 @@ body {
 }
 
 @media (max-width: 420px) {
+  .top-nav {
+    padding: 0 10px;
+  }
+  
+  .college-logo img {
+    width: 120px;
+    height: 25px;
+  }
+  
+  .nav-right {
+    gap: 8px;
+  }
+  
+  .theme-btn {
+    font-size: 16px;
+  }
+  
+  .profile i {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+  }
+  
+  .logout a {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
   .usn-input { width: 200px; }
   .student-image img { width: 150px; height: 150px; }
   .student-info h3 { font-size: 18px; }

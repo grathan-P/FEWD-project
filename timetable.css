@@ -242,6 +242,36 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+  /* Responsive top navbar */
+  .top-nav {
+    padding: 0 15px;
+  }
+  
+  .college-logo img {
+    width: 140px;
+    height: 28px;
+  }
+  
+  .nav-right {
+    gap: 10px;
+  }
+  
+  .theme-btn {
+    font-size: 18px;
+  }
+  
+  .profile i {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+  }
+  
+  .logout a {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
   /* Stack layout and make sidebar usable on small screens */
   .middle-man { 
     flex-direction: column; 
