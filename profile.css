@@ -1,0 +1,408 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #0f172a, #000);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ===== LIGHT THEME ===== */
+.light-theme {
+  background: radial-gradient(circle at top, #e0e7ff, #f8fafc) !important;
+  color: #1e293b !important;
+}
+
+.light-theme body {
+  background: radial-gradient(circle at top, #e0e7ff, #f8fafc);
+  color: #1e293b;
+}
+
+.light-theme .top-nav {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-bottom: 1px solid rgba(0,0,0,0.1) !important;
+}
+
+.light-theme .college-logo img {
+  filter: brightness(0.2);
+}
+
+.light-theme .theme-btn,
+.light-theme .profile i {
+  color: #1e293b !important;
+  border-color: #7c3aed !important;
+}
+
+.light-theme .sidebar {
+  background: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.15) !important;
+}
+
+.light-theme .sidebar li {
+  color: #475569 !important;
+}
+
+.light-theme .sidebar li:hover,
+.light-theme .sidebar li.Home {
+  background: rgba(124, 58, 237, 0.15) !important;
+  color: #1e293b !important;
+}
+
+.light-theme .content h2 {
+  background: linear-gradient(90deg, #7c3aed, #3b82f6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.light-theme .content p {
+  color: #475569 !important;
+}
+
+.light-theme .usn-input {
+  background: rgba(124, 58, 237, 0.05) !important;
+  color: #1e293b !important;
+  border-color: rgba(124, 58, 237, 0.3) !important;
+}
+
+.light-theme .usn-input::placeholder {
+  color: #7c3aed !important;
+  opacity: 0.6;
+}
+
+.light-theme .student-info h3 {
+  color: #7c3aed !important;
+}
+
+.light-theme .student-info p {
+  color: #475569 !important;
+}
+
+.light-theme .footer {
+  background: radial-gradient(circle at top, #e0e7ff, #f8fafc) !important;
+  color: #475569 !important;
+  border-top: 1px solid rgba(0,0,0,0.1) !important;
+}
+
+.light-theme .footer-column h2 {
+  color: #7c3aed !important;
+  border-bottom-color: rgba(124, 58, 237, 0.3) !important;
+}
+
+.light-theme .footer-column p,
+.light-theme .footer-column ul li a {
+  color: #64748b !important;
+}
+
+.light-theme .footer-bottom {
+  color: #64748b !important;
+  border-top-color: rgba(0,0,0,0.1) !important;
+}
+
+.light-theme .footer-bottom a {
+  color: #7c3aed !important;
+}
+
+/* ===== TOP NAVBAR ===== */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(15, 23, 42, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  z-index: 50;
+}
+
+.college-logo {
+  display: flex;
+  align-items: center;
+}
+
+.college-logo img {
+  width: 200px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.theme-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.profile i, .profile img {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid #6d28d9;
+  text-align: center;
+  line-height: 40px;
+}
+
+.logout a {
+  text-decoration: none;
+  color: #fff;
+  background: #7c3aed;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.logout a:hover {
+  background: #5b21b6;
+}
+
+/* Home button in navbar */
+.home-link-btn {
+  background: transparent;
+  border: 1px solid rgba(148,163,184,0.6);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.light-theme .home-link-btn {
+  color: #1e293b;
+  border-color: #7c3aed;
+}
+
+/* MAIN PROFILE LAYOUT */
+.profile-container {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 140px;
+    padding: 20px;
+    display: flex;
+    gap: 40px;
+    animation: fadeIn 1s ease;
+    align-items: center;
+}
+
+/* LEFT CARD */
+.profile-card {
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    width: 320px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(124,58,237,0.2);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.profile-pic {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #7c3aed;
+}
+
+.profile-card h2 {
+    margin-top: 15px;
+    font-size: 26px;
+}
+
+.designation {
+    color: #a78bfa;
+    font-size: 16px;
+}
+
+.department {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+/* SOCIAL ICONS */
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    font-size: 20px;
+    color: #fff;
+    background: rgba(124,58,237,0.2);
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: linear-gradient(90deg, #7c3aed, #3b82f6);
+    transform: scale(1.15);
+}
+
+/* RIGHT SIDE INFO CARDS */
+.info-sections {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-card {
+    background: rgba(255,255,255,0.04);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 15px rgba(59,130,246,0.2);
+}
+
+/* Card header with actions */
+.info-card .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+  color: #e2e8f0;
+  border: 1px solid rgba(148,163,184,0.35);
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.icon-btn i { font-size: 14px; }
+
+.icon-btn:hover {
+  border-color: #a78bfa;
+  box-shadow: 0 0 10px rgba(124,58,237,0.25);
+}
+
+.light-theme .icon-btn {
+  color: #1e293b;
+  border-color: #7c3aed;
+}
+
+.light-theme .icon-btn:hover {
+  background: #7c3aed;
+  color: #fff;
+}
+
+/* Light theme overrides for profile components */
+.light-theme .profile-card {
+  background: rgba(255,255,255,0.9) !important;
+  border: 1px solid rgba(124,58,237,0.25) !important;
+  box-shadow: 0 0 15px rgba(124,58,237,0.12) !important;
+  color: #1e293b !important;
+}
+
+.light-theme .profile-card h2 { color: #1e293b !important; }
+.light-theme .designation { color: #7c3aed !important; }
+.light-theme .department { color: #475569 !important; }
+
+.light-theme .social-links a {
+  color: #1e293b !important;
+  background: rgba(124,58,237,0.15) !important;
+}
+
+.light-theme .social-links a:hover {
+  background: linear-gradient(90deg, #7c3aed, #3b82f6) !important;
+  color: #fff !important;
+}
+
+.light-theme .info-card {
+  background: rgba(255,255,255,0.9) !important;
+  border: 1px solid rgba(124,58,237,0.25) !important;
+  box-shadow: 0 0 12px rgba(124,58,237,0.1) !important;
+}
+
+.light-theme .info-card h3 { color: #7c3aed !important; }
+.light-theme .info-card p,
+.light-theme .info-card li { color: #475569 !important; }
+
+.info-card h3 {
+    font-size: 22px;
+    color: #a78bfa;
+    margin-bottom: 12px;
+}
+
+.info-card p, .info-card li {
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+.info-card ul {
+    padding-left: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .profile-container {
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .profile-card {
+        width: 100%;
+    }
+}
+
+/* Additional responsive tweaks */
+@media (max-width: 768px) {
+  .profile-container {
+    margin-top: 110px;
+    padding: 16px;
+    gap: 24px;
+  }
+  .profile-card { padding: 22px; }
+  .profile-pic { width: 110px; height: 110px; }
+  .profile-card h2 { font-size: 22px; }
+  .designation { font-size: 15px; }
+  .department { font-size: 13px; }
+  .info-card { padding: 20px; }
+  .info-card h3 { font-size: 20px; }
+}
+
+@media (max-width: 480px) {
+  .profile-container {
+    margin: 100px 12px 20px;
+    padding: 12px;
+    gap: 18px;
+  }
+  .profile-card { padding: 18px; }
+  .profile-pic { width: 96px; height: 96px; }
+  .profile-card h2 { font-size: 20px; }
+  .social-links a { padding: 8px; font-size: 18px; }
+  .info-card { padding: 16px; }
+  .info-card h3 { font-size: 18px; }
+  .icon-btn span { display: none; } /* keep icons only on very small screens */
+  .icon-btn { padding: 6px 8px; }
+}

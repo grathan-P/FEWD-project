@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Profile - Teacher Portal</title>
+
+  <link rel="stylesheet" href="profile.css" />
+  
+  <!-- Apply theme before page renders to prevent flash -->
+  <script>
+    (function() {
+      const theme = localStorage.getItem('site_theme') || 'dark';
+      if (theme === 'light') {
+        document.documentElement.classList.add('light-theme');
+      }
+    })();
+  </script>
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <!-- Top Navbar -->
+  <nav class="top-nav">
+    <div class="college-logo">
+      <img src="images/nitteLogo.png" alt="NMAMIT Logo">
+    </div>
+    <div class="nav-right">
+      <a id="home-link" class="home-link-btn" href="home.html">Home</a>
+      <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+      <div class="profile">
+        <a href="profile.html"><i class="fa-solid fa-user"></i></a>
+      </div>
+      <button class="logout"><a href="index.html">Log Out</a></button>
+    </div>
+  </nav>
+
+<!-- MAIN PROFILE SECTION -->
+<main class="profile-container">
+
+    <div class="profile-card">
+        <img src="images/profile1.png" alt="Teacher Photo" class="profile-pic">
+
+        <h2>Prof. Ananya Rao</h2>
+        <p class="designation">Assistant Professor</p>
+        <p class="department">Department of Computer Science & Engineering</p>
+
+        <div class="social-links">
+            <a href="#" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </div>
+
+    <div class="info-sections">
+
+        <div class="info-card">
+            <div class="card-header">
+              <h3>About Me</h3>
+              <button type="button" class="icon-btn edit-btn" aria-label="Edit About Me">
+                <i class="fa-solid fa-pen"></i>
+                <span>Edit</span>
+              </button>
+            </div>
+            <p>
+              I am a passionate educator with 8+ years of teaching experience,
+              specializing in Data Structures, Operating Systems, and Web Technologies.
+              I believe in hands-on learning and motivating students to build real projects.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-header">
+              <h3>Skills</h3>
+              <button type="button" class="icon-btn add-skill-btn" aria-label="Add Skill">
+                <i class="fa-solid fa-plus"></i>
+                <span>Add Skill</span>
+              </button>
+            </div>
+            <ul>
+                <li>🟣 Data Structures & Algorithms</li>
+                <li>🟣 Web Development (HTML, CSS, JS)</li>
+                <li>🟣 DBMS & SQL</li>
+                <li>🟣 Python Programming</li>
+                <li>🟣 Cloud Concepts</li>
+            </ul>
+        </div>
+
+    </div>
+
+</main>
+</div>
+
+<script>
+  // Theme toggle functionality
+  const THEME_KEY = 'site_theme';
+
+  function applyTheme(theme) {
+    if (theme === 'light') {
+      document.documentElement.classList.add('light-theme');
+      const btn = document.getElementById('theme-toggle');
+      if (btn) btn.innerHTML = '<i class="fas fa-sun"></i>';
+    } else {
+      document.documentElement.classList.remove('light-theme');
+      const btn = document.getElementById('theme-toggle');
+      if (btn) btn.innerHTML = '<i class="fas fa-moon"></i>';
+    }
+  }
+
+  function loadTheme() {
+    const t = localStorage.getItem(THEME_KEY) || 'dark';
+    applyTheme(t);
+  }
+
+  function toggleTheme() {
+    const current = localStorage.getItem(THEME_KEY) || 'dark';
+    const next = current === 'dark' ? 'light' : 'dark';
+    localStorage.setItem(THEME_KEY, next);
+    applyTheme(next);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const themeBtn = document.getElementById('theme-toggle');
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        toggleTheme();
+      });
+    }
+    loadTheme();
+  });
+</script>
+
+</body>
+</html>
