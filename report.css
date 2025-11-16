@@ -50,10 +50,17 @@ html,body{
 .container{
   padding:22px;
   border-radius:var(--radius);
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  background: linear-gradient(
+  180deg,
+  rgba(255,255,255,0.08),
+  rgba(255,255,255,0.04)
+);
+
   border:1px solid rgba(255,255,255,0.04);
   box-shadow: 0 10px 30px rgba(2,6,23,0.6);
 }
+
+
 
 /* subtle top line in container */
 .container::before{
@@ -181,8 +188,8 @@ td.right{
   margin-top:20px;
   padding:10px;
   border-radius:10px;
-  background:linear-gradient(90deg, rgba(124,58,237,0.12), rgba(6,182,212,0.06));
-  color:white;
+  background:linear-gradient(90deg, #7c3aed, #06b6d4); /* opaque to avoid transparency artifact */
+  color:#ffffff;
   text-align:center;
 }
 
@@ -215,6 +222,71 @@ td.right{
   border-color: #7c3aed;
 }
 
+/* ================================ */
+/* Light theme overrides - Report   */
+/* ================================ */
+.light-theme .report-page {
+  color: #1e293b;
+}
+
+.light-theme .report-header h1 {
+  color: #1e293b;
+}
+
+.light-theme .report-header p {
+  color: #64748b;
+}
+
+.light-theme .container{
+  background: rgba(255,255,255,0.9);
+  border:1px solid rgba(124,58,237,0.2);
+  box-shadow: 0 10px 20px rgba(124,58,237,0.08);
+}
+
+.light-theme label{ color:#64748b; }
+
+.light-theme input[type="text"],
+.light-theme select{
+  background:#ffffff;
+  color:#1e293b;
+  border:1px solid rgba(0,0,0,0.15);
+}
+
+.light-theme thead th{
+  color:#1e293b;
+  background: rgba(124,58,237,0.08);
+  border-bottom:1px solid rgba(0,0,0,0.08);
+}
+
+.light-theme tbody td{
+  color:#1f2937;
+  border-bottom:1px solid rgba(0,0,0,0.06);
+}
+
+.light-theme .summary div{
+  background: rgba(124,58,237,0.06);
+  border:1px solid rgba(124,58,237,0.15);
+}
+
+.light-theme .summary small{ color:#64748b; }
+
+.light-theme .btn{
+  border-color:#7c3aed;
+  color:#1e293b;
+}
+
+.light-theme .backlog-info{
+  background: rgba(124,58,237,0.08);
+  border-color: rgba(124,58,237,0.4);
+  color:#1f2937;
+}
+
+.light-theme .report-footer{
+  background:#ffffff;
+  color:#1e293b;
+  border:1px solid rgba(0,0,0,0.08);
+}
+
 /* responsive tweaks */
 @media (max-width: 768px) {
   .page {
@@ -228,6 +300,30 @@ td.right{
   .summary {
     justify-content: stretch;
   }
+
+  /* Make the grade table horizontally scrollable on small screens */
+  table{
+    display:block;
+    overflow-x:auto;
+    white-space:nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  thead th, tbody td{
+    padding:8px 10px;
+    font-size:12px;
+  }
+}
+
+@media (max-width: 992px) {
+  .report-header h1 { font-size: 22px; }
+  .report-header p { font-size: 13px; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 14px; }
+  .student-card { grid-template-columns: 1fr; }
+  .btn { padding: 8px 10px; }
+  thead th, tbody td{ padding:7px 8px; font-size:11.5px; }
 }
 /* ========================= */
 /*  DROPDOWN MENU FIX (OPEN) */

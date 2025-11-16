@@ -394,6 +394,11 @@ body {
   .announce-card h3 {
     font-size: 1.2rem;
   }
+  
+  /* Make container full-width on tablet */
+  .announce-container {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -476,6 +481,11 @@ body {
   
   .announce-card p {
     font-size: 0.95rem;
+  }
+  
+  /* Make container full-width on mobile */
+  .announce-container {
+    width: 100%;
   }
 }
 
@@ -564,6 +574,11 @@ body {
     padding: 5px 12px;
     font-size: 0.75rem;
   }
+  
+  /* Ensure container uses full width on small phones */
+  .announce-container {
+    width: 100%;
+  }
 }
 
 /* Main container */
@@ -578,7 +593,7 @@ body {
 
 .announce-container {
     max-width: 100%;
-    width: 100%;
+    width: 80%;
     text-align: center;
 }
 
@@ -611,6 +626,7 @@ body {
     text-align: left;
     transition: all 0.3s ease;
     box-shadow: 0 0 12px rgba(124, 58, 237, 0.2);
+    /* width: 80%; */
 }
 
 .announce-card:hover {
@@ -805,3 +821,32 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* FORCE FIX for mobile responsiveness */
+@media (max-width: 992px) {
+  .announce-section {
+    margin-left: 0 !important;
+    padding: 20px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .announce-container {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 10px !important;
+  }
+
+  .announce-card {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .announce-section {
+    padding: 12px !important;
+  }
+
+  .announce-card {
+    padding: 15px !important;
+  }
+}
