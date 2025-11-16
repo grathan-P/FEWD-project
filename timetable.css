@@ -104,6 +104,23 @@ body {
   color: #7c3aed !important;
 }
 
+.light-theme .logout a {
+  background: #7c3aed !important;
+  color: #fff !important;
+}
+
+.light-theme .logout a:hover {
+  background: #5b21b6 !important;
+}
+
+.light-theme .timetable-container .days {
+  color: #7c3aed !important;
+}
+
+.light-theme .table-wrapper {
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.15) !important;
+}
+
 .top-nav {
   position: fixed;
   top: 0;
@@ -298,6 +315,11 @@ body {
   margin-bottom: 10px;
 }
 
+.timetable-container .days {
+  color: #a78bfa;
+  margin-bottom: 10px;
+}
+
 .intro {
   color: #94a3b8;
   margin-bottom: 40px;
@@ -358,10 +380,41 @@ body {
 }
 
 /* Responsive */
+@media (max-width: 992px) {
+  .top-nav {
+    padding: 0 20px;
+  }
+  
+  .college-logo img {
+    width: 160px;
+    height: 32px;
+  }
+  
+  .nav-right {
+    gap: 15px;
+  }
+  
+  .timetable-section {
+    margin-left: 80px;
+    padding: 30px 20px;
+  }
+  
+  .timetable-container h1 {
+    font-size: 1.8rem;
+  }
+  
+  .timetable th,
+  .timetable td {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 768px) {
   /* Responsive top navbar */
   .top-nav {
     padding: 0 15px;
+    height: 60px;
   }
   
   .college-logo img {
@@ -415,8 +468,83 @@ body {
   }
 
   .timetable-container h1 { font-size: 1.6rem; }
+  .intro { font-size: 0.9rem; }
+  
+  .timetable {
+    min-width: 700px;
+  }
+  
   .timetable th,
-  .timetable td { padding: 10px; font-size: 0.85rem; }
+  .timetable td { 
+    padding: 10px 6px; 
+    font-size: 0.8rem; 
+  }
+}
+
+@media (max-width: 420px) {
+  .top-nav {
+    height: 55px;
+    padding: 0 10px;
+  }
+  
+  .college-logo img {
+    width: 120px;
+    height: 24px;
+  }
+  
+  .theme-btn {
+    font-size: 16px;
+  }
+  
+  .profile i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+  }
+  
+  .logout a {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  
+  .sidebar {
+    margin: 75px 15px 10px;
+    width: calc(100% - 30px);
+  }
+  
+  .sidebar:hover { width: calc(100% - 30px); }
+  
+  .sidebar li {
+    padding: 10px 12px;
+  }
+  
+  .sidebar li a span, .sidebar li span {
+    font-size: 11px;
+  }
+  
+  .timetable-section {
+    padding: 15px;
+  }
+  
+  .timetable-container h1 {
+    font-size: 1.4rem;
+  }
+  
+  .intro {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+  }
+  
+  .timetable {
+    min-width: 650px;
+  }
+  
+  .timetable th,
+  .timetable td {
+    padding: 8px 4px;
+    font-size: 0.75rem;
+  }
 }
 
 /* ===== FOOTER ===== */

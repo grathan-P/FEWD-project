@@ -404,11 +404,171 @@ body {
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
+
+/* Large tablets and small desktops */
+@media (max-width: 992px) {
+  .top-nav {
+    padding: 0 20px;
+  }
+
+  .college-logo img {
+    width: 160px;
+    height: 32px;
+  }
+
+  .nav-right {
+    gap: 15px;
+  }
+
   .content {
-    margin-left: 80px;
-     flex-direction: column;
+    margin-left: 30px;
+    margin-right: 50px;
+    padding: 30px 20px;
+  }
+
+  .login-teacher {
+    width: 350px;
+    padding: 18px;
+  }
+
+  .login-teacher h1 {
+    font-size: 30px;
+  }
+
+  .techer-illustration img {
+    width: 350px !important;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .top-nav {
+    height: 60px;
+    padding: 0 15px;
+  }
+
+  .college-logo img {
+    width: 140px;
+    height: 28px;
+  }
+
+  .theme-btn {
+    font-size: 18px;
+  }
+
+  .profile a {
+    font-size: 14px;
+  }
+
+  .content {
+    flex-direction: column;
+    margin: 80px 20px 20px;
+    padding: 20px;
+    gap: 30px;
     align-items: center;
-    text-align: center;
+  }
+
+  .login-teacher {
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+    padding: 25px;
+  }
+
+  .login-teacher h1 {
+    font-size: 28px;
+  }
+
+  .login-teacher p {
+    font-size: 15px;
+  }
+
+  .login-teacher input {
+    width: 90%;
+  }
+
+  .techer-illustration {
+    order: -1;
+  }
+
+  .techer-illustration img {
+    width: 100% !important;
+    max-width: 350px !important;
+  }
+
+  .buttons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 420px) {
+  .top-nav {
+    height: 55px;
+    padding: 0 10px;
+  }
+
+  .college-logo img {
+    width: 120px;
+    height: 24px;
+  }
+
+  .nav-right {
+    gap: 10px;
+  }
+
+  .theme-btn {
+    font-size: 16px;
+  }
+
+  .profile a {
+    font-size: 12px;
+  }
+
+  .content {
+    margin: 70px 10px 10px;
+    padding: 15px;
+  }
+
+  .login-teacher {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 15px;
+    border-radius: 30px;
+  }
+
+  .login-teacher h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .login-teacher p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .login-teacher input {
+    width: 95%;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .login {
+    margin-bottom: 30px;
+  }
+
+  .techer-illustration img {
+    width: 100% !important;
+    max-width: 280px !important;
+  }
+
+  .footer-container {
+    padding: 0 10px;
   }
 }
