@@ -72,25 +72,69 @@ const studentData = {
     name: 'Riya Sharma',
     img: 'images/student1.png',
     course: 'B.Tech',
-    branch: 'Computer Science'
+    branch: 'Computer Science',
+    semester: '3rd Semester',
+    section: 'A',
+    email: 'riya.sharma@nmamit.in',
+    phone: '+91 98765 43210',
+    attendance: '92%',
+    cgpa: '9.93',
+    sgpa: '9.95',
+    parentName: 'Mr. Rajesh Sharma',
+    parentContact: '+91 98123 45678',
+    address: 'MIG-45, Sector 12, Bangalore, Karnataka',
+    bloodGroup: 'O+'
   },
   '4NM21CS002': {
     name: 'Arjun Kumar',
     img: 'images/student1.png',
     course: 'B.Tech',
-    branch: 'Information Technology'
+    branch: 'Information Technology',
+    semester: '5th Semester',
+    section: 'B',
+    email: 'arjun.kumar@nmamit.in',
+    phone: '+91 99887 76655',
+    attendance: '88%',
+    cgpa: '8.45',
+    sgpa: '8.30',
+    parentName: 'Mrs. Sunita Kumar',
+    parentContact: '+91 98234 56789',
+    address: 'House No. 23, Jayanagar, Mangalore, Karnataka',
+    bloodGroup: 'A+'
   },
   '4NM21CS003': {
     name: 'Sneha Patil',
     img: 'images/student1.png',
     course: 'B.Tech',
-    branch: 'Electronics and Communication'
+    branch: 'Electronics and Communication',
+    semester: '4th Semester',
+    section: 'C',
+    email: 'sneha.patil@nmamit.in',
+    phone: '+91 97654 32109',
+    attendance: '85%',
+    cgpa: '8.12',
+    sgpa: '7.95',
+    parentName: 'Mr. Prakash Patil',
+    parentContact: '+91 99345 67890',
+    address: 'Flat 12B, Kodialbail, Mangalore, Karnataka',
+    bloodGroup: 'B+'
   },
   'NNM24CS999': {
     name: 'rajendra jogi',
     img: 'images/student1.png',
     course: 'B.Tech',
-    branch: 'Computer Science'
+    branch: 'Computer Science',
+    semester: '2nd Semester',
+    section: 'A',
+    email: 'rajendra.jogi@nmamit.in',
+    phone: '+91 96543 21098',
+    attendance: '95%',
+    cgpa: '9.10',
+    sgpa: '9.20',
+    parentName: 'Mrs. Anita Jogi',
+    parentContact: '+91 98456 78901',
+    address: 'Villa 8, Kadri Hills, Mangalore, Karnataka',
+    bloodGroup: 'AB+'
   }
 };
 
@@ -120,14 +164,37 @@ function renderStudent(usnRaw) {
     return;
   }
 
-  // Get record (or fallback)
-  const data = studentData[usn] || {
-    name: 'Student Not Found',
-    img: 'images/default.png',
-    course: 'N/A',
-    branch: 'N/A'
-  };
+  // Check if student exists
+  const data = studentData[usn];
 
+  if (!data) {
+    // Student not found - show error message only
+    imgDiv.innerHTML = '';
+    infoDiv.innerHTML = `
+      <div style="text-align: center; padding: 30px;">
+        <i class="fa-solid fa-user-slash" style="font-size: 60px; color: #ef4444; margin-bottom: 15px;"></i>
+        <h3 style="color: #ef4444; font-size: 24px; margin-bottom: 10px;">Student Not Found</h3>
+        <p style="color: #cbd5e1; font-size: 16px;">No student with USN "${usn}" is recorded in the system.</p>
+      </div>
+    `;
+
+    const mainContent = document.querySelector('.content');
+    if (mainContent && !mainContent.contains(studentContainer)) {
+      mainContent.appendChild(studentContainer);
+    }
+
+    studentContainer.style.display = 'flex';
+    
+    // Hide extra details section if student not found
+    const extraDetailsSection = document.querySelector('.extra-details-section');
+    if (extraDetailsSection) {
+      extraDetailsSection.style.display = 'none';
+    }
+    
+    return;
+  }
+
+  // Student found - show full details
   // Left: image
   imgDiv.innerHTML = `<img src="${data.img}" alt="${data.name}">`;
 
@@ -173,6 +240,99 @@ function renderStudent(usnRaw) {
   }
 
   studentContainer.style.display = 'flex';
+
+  // Create separate extra details section below the main container
+  let extraDetailsSection = document.querySelector('.extra-details-section');
+  if (!extraDetailsSection) {
+    extraDetailsSection = document.createElement('div');
+    extraDetailsSection.classList.add('extra-details-section');
+    mainContent.appendChild(extraDetailsSection);
+  }
+
+  extraDetailsSection.innerHTML = `
+    <div class="extra-details">
+      <div class="detail-item">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <div class="detail-content">
+          <span class="detail-label">Semester</span>
+          <span class="detail-value">${data.semester || 'N/A'}</span>
+        </div>
+      </div>
+      
+      <div class="detail-item">
+        <i class="fa-solid fa-users"></i>
+        <div class="detail-content">
+          <span class="detail-label">Section</span>
+          <span class="detail-value">${data.section || 'N/A'}</span>
+        </div>
+      </div>
+      
+      <div class="detail-item">
+        <i class="fa-solid fa-envelope"></i>
+        <div class="detail-content">
+          <span class="detail-label">Email</span>
+          <span class="detail-value">${data.email || 'N/A'}</span>
+        </div>
+      </div>
+      
+      <div class="detail-item">
+        <i class="fa-solid fa-phone"></i>
+        <div class="detail-content">
+          <span class="detail-label">Phone</span>
+          <span class="detail-value">${data.phone || 'N/A'}</span>
+        </div>
+      </div>
+      
+      <div class="detail-item">
+        <i class="fa-solid fa-calendar-check"></i>
+        <div class="detail-content">
+          <span class="detail-label">Attendance</span>
+          <span class="detail-value">${data.attendance || 'N/A'}</span>
+        </div>
+      </div>
+      
+      <div class="detail-item">
+        <i class="fa-solid fa-chart-line"></i>
+        <div class="detail-content">
+          <span class="detail-label">CGPA / SGPA</span>
+          <span class="detail-value">${data.cgpa || 'N/A'} / ${data.sgpa || 'N/A'}</span>
+        </div>
+      </div>
+      
+      <div class="detail-item">
+        <i class="fa-solid fa-user-tie"></i>
+        <div class="detail-content">
+          <span class="detail-label">Parent/Guardian</span>
+          <span class="detail-value">${data.parentName || 'N/A'}</span>
+        </div>
+      </div>
+      
+      <div class="detail-item">
+        <i class="fa-solid fa-phone-volume"></i>
+        <div class="detail-content">
+          <span class="detail-label">Parent Contact</span>
+          <span class="detail-value">${data.parentContact || 'N/A'}</span>
+        </div>
+      </div>
+      
+      <div class="detail-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <div class="detail-content">
+          <span class="detail-label">Address</span>
+          <span class="detail-value">${data.address || 'N/A'}</span>
+        </div>
+      </div>
+      
+      <div class="detail-item">
+        <i class="fa-solid fa-droplet"></i>
+        <div class="detail-content">
+          <span class="detail-label">Blood Group</span>
+          <span class="detail-value">${data.bloodGroup || 'N/A'}</span>
+        </div>
+      </div>
+    </div>
+  `;
+  extraDetailsSection.style.display = 'block';
 
   // Update URL so state persists on refresh
   setUSNinURL(usn);
