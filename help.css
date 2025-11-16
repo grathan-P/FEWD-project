@@ -562,3 +562,19 @@ body {
   width: 20px;
   text-align: center;
 }
+/* Report button (next to Attendance) */
+.report-btn {
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  color: #fff;
+}
+
+.report-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.6);
+}
+
+/* Optional: tweak in light mode */
+.light-theme .report-btn {
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  color: #f9fafb;
+}

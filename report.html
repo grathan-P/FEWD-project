@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Grade Report</title>
+
+  <!-- Apply theme before page renders to prevent flash (same as home) -->
+  <script>
+    (function () {
+      const theme = localStorage.getItem('site_theme') || 'dark';
+      if (theme === 'light') {
+        document.documentElement.classList.add('light-theme');
+      }
+    })();
+  </script>
+
+  <!-- Reuse home styles for navbar + global look -->
+  <link rel="stylesheet" href="home.css" />
+  <!-- Extra styles specific to report page -->
+  <link rel="stylesheet" href="report.css" />
+
+  <!-- Icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Top Navbar (same style as home, with extra Home link) -->
+  <nav class="top-nav">
+    <div class="college-logo">
+      <img src="images/nitteLogo.png" alt="NMAMIT Logo">
+    </div>
+    <div class="nav-right">
+      <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+      <!-- New: Home link -->
+      <button id="home-link" class="home-link-btn">Home</button>
+      <div class="profile">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <button class="logout"><a href="index.html">Log Out</a></button>
+    </div>
+  </nav>
+
+  <div class="report-page">
+    <div class="page">
+      <header class="report-header">
+        <h1>Student Grade Report</h1>
+        <p>Academic Progress Overview</p>
+      </header>
+
+      <main class="container" id="app">
+        <!-- Student info + semester selector -->
+        <section class="student-card">
+          <div class="info">
+            <label for="stuName">Student Name</label>
+            <input id="stuName" type="text" value="" readonly />
+          </div>
+          <div class="info">
+            <label for="stuUSN">USN</label>
+            <input id="stuUSN" type="text" value="" readonly />
+          </div>
+          <div class="info">
+            <label for="semSelect">Semester</label>
+            <select id="semSelect">
+              <option value="1">1st Semester</option>
+              <option value="2">2nd Semester</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- Grade table -->
+        <section>
+          <table id="marksTable" aria-label="Semester grade table">
+            <thead>
+              <tr>
+                <th style="width:4rem">Sl. No.</th>
+                <th style="width:7rem">Course Code</th>
+                <th>Course Title</th>
+                <th style="width:5rem">Credits</th>
+                <th style="width:7rem">Grade Points</th>
+                <th style="width:8rem">Credit Points</th>
+                <th style="width:5rem">Grade</th>
+                <th style="width:7rem">Remarks</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Filled by JS -->
+            </tbody>
+          </table>
+
+          <div id="noData" class="no-data">
+            No result data found for this student.
+          </div>
+
+          <div class="controls">
+            <button id="print" class="btn">Print</button>
+          </div>
+
+          <!-- Summary & academic progress -->
+          <div class="summary" aria-live="polite">
+            <div>
+              <small>Semester Credits</small>
+              <div id="semCredits">0</div>
+            </div>
+            <div>
+              <small>Semester Credit Points</small>
+              <div id="semCreditPoints">0</div>
+            </div>
+            <div>
+              <small>SGPA (Selected Sem)</small>
+              <div id="sgpaCurrent">0</div>
+            </div>
+            <div>
+              <small>Cumulative Credits</small>
+              <div id="cumCredits">0</div>
+            </div>
+            <div>
+              <small>Cumulative Credit Points</small>
+              <div id="cumCreditPoints">0</div>
+            </div>
+            <div>
+              <small>Overall CGPA</small>
+              <div id="overallCgpa">0</div>
+            </div>
+          </div>
+
+          <div class="backlog-info" id="backlogInfo">
+            <!-- Backlog status filled by JS -->
+          </div>
+        </section>
+      </main>
+
+      <footer class="report-footer">
+        <p>&copy; 2025 Student Grade Report. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="report.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
