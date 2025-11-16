@@ -10,14 +10,38 @@
 
   <!-- page-specific CSS -->
   <link rel="stylesheet" href="assignment.css" />
+
+  <!-- Apply theme before page renders to prevent flash (same as home page) -->
+  <script>
+    (function() {
+      const theme = localStorage.getItem('site_theme') || 'dark';
+      if (theme === 'light') {
+        document.documentElement.classList.add('light-theme');
+      }
+    })();
+  </script>
+
+  <!-- Icons CSS (same as home page) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-  <!-- Top nav (reuses structure from home.html) -->
+  <!-- Top nav (same structure as home.html) -->
   <nav class="top-nav">
-    <div class="college-logo"><img src="images/nitteLogo.png" alt="NMAMIT"></div>
+    <div class="college-logo">
+      <img src="images/nitteLogo.png" alt="NMAMIT">
+    </div>
     <div class="nav-right">
-      <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
-      <div class="profile"><i class="fa-solid fa-user"></i></div>
+      <button id="theme-toggle" class="theme-btn">
+        <i class="fas fa-moon"></i>
+      </button>
+      <div class="profile">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <button class="logout">
+        <a href="index.html">Log Out</a>
+      </button>
     </div>
   </nav>
 
@@ -72,7 +96,7 @@
   </main>
 
   <script src="assignment.js"></script>
-  <!-- Font Awesome (icons) -->
+  <!-- Font Awesome kit (for icons) -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>

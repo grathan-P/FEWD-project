@@ -163,3 +163,57 @@
   .student-banner img { width:72px; height:72px; }
   .assignment-page { padding:18px; margin-left: 80px; }
 }
+
+/* ========== LIGHT THEME OVERRIDES (same feel as home page) ========== */
+
+.light-theme .assignment-page {
+  color: #1e293b;
+}
+
+.light-theme .assign-header h2,
+.light-theme .list-title,
+.light-theme .student-name,
+.light-theme .assign-controls h3 {
+  color: #7c3aed;
+}
+
+.light-theme .student-banner,
+.light-theme .assign-card,
+.light-theme .assign-controls {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.light-theme .student-usn,
+.light-theme .student-course,
+.light-theme .assign-card p,
+.light-theme .assign-meta,
+.light-theme .no-assign {
+  color: #475569;
+}
+
+.light-theme .form-row label {
+  color: #64748b;
+}
+
+.light-theme .form-row input[type="text"],
+.light-theme .form-row textarea,
+.light-theme .form-row input[type="date"] {
+  background: rgba(124, 58, 237, 0.03);
+  color: #1e293b;
+  border-color: rgba(124, 58, 237, 0.3);
+}
+
+.light-theme .assignment-btn {
+  color: #fff;
+}
+
+.light-theme .attendance-btn {
+  background: rgba(124, 58, 237, 0.05);
+  color: #1e293b;
+  border-color: rgba(124, 58, 237, 0.4);
+}
+
+.light-theme .delete-btn {
+  color: #fff;
+}

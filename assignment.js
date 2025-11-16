@@ -1,6 +1,6 @@
-// assignment.js (updated: theme support + update back-link with usn)
+// assignment.js (theme support + update back-link with usn)
 
-// Theme handling (shared with home.js)
+// --- Theme handling (shared with home.js) ---
 const THEME_KEY = 'site_theme';
 
 function applyThemeAssign(theme) {
@@ -27,16 +27,26 @@ function toggleThemeAssign() {
   applyThemeAssign(next);
 }
 
-// wire theme button early
+// wire theme button + apply theme on load
 document.addEventListener('DOMContentLoaded', () => {
   const themeBtn = document.getElementById('theme-toggle');
   if (themeBtn) {
     themeBtn.addEventListener('click', () => toggleThemeAssign());
   }
   loadThemeAssign();
+
+  // Update Back link so it returns to home with same USN (if present)
+  const backLink = document.querySelector('.back-link');
+  if (backLink) {
+    if (currentUSN) {
+      backLink.href = `home.html?usn=${encodeURIComponent(currentUSN)}`;
+    } else {
+      backLink.href = 'home.html';
+    }
+  }
 });
 
-// ---------------- existing assignment.js content (unchanged logic) ----------------
+// ---------------- existing assignment logic ----------------
 
 // Shared assignments + per-student submissions using localStorage
 
@@ -97,18 +107,6 @@ if (!currentUSN) {
     studentCourseEl.textContent = '';
   }
 }
-
-// Update Back link so it returns to home with same USN (if present)
-document.addEventListener('DOMContentLoaded', () => {
-  const backLink = document.querySelector('.back-link');
-  if (backLink) {
-    if (currentUSN) {
-      backLink.href = `home.html?usn=${encodeURIComponent(currentUSN)}`;
-    } else {
-      backLink.href = 'home.html';
-    }
-  }
-});
 
 // unique id for assignments
 function uid() { return 'a_' + Math.random().toString(36).slice(2, 9); }
