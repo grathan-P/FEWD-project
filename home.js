@@ -225,7 +225,6 @@ function renderStudent(usnRaw) {
     window.location.href = `attendance.html?usn=${encodeURIComponent(usn)}`;
   });
 
-  // NEW: Report button – opens read-only result page
   reportBtn.addEventListener('click', () => {
     window.location.href = `report.html?usn=${encodeURIComponent(usn)}`;
   });
@@ -249,8 +248,11 @@ function renderStudent(usnRaw) {
     mainContent.appendChild(extraDetailsSection);
   }
 
+  
+
   extraDetailsSection.innerHTML = `
     <div class="extra-details">
+      <!-- College Information -->
       <div class="detail-item">
         <i class="fa-solid fa-graduation-cap"></i>
         <div class="detail-content">
@@ -264,22 +266,6 @@ function renderStudent(usnRaw) {
         <div class="detail-content">
           <span class="detail-label">Section</span>
           <span class="detail-value">${data.section || 'N/A'}</span>
-        </div>
-      </div>
-      
-      <div class="detail-item">
-        <i class="fa-solid fa-envelope"></i>
-        <div class="detail-content">
-          <span class="detail-label">Email</span>
-          <span class="detail-value">${data.email || 'N/A'}</span>
-        </div>
-      </div>
-      
-      <div class="detail-item">
-        <i class="fa-solid fa-phone"></i>
-        <div class="detail-content">
-          <span class="detail-label">Phone</span>
-          <span class="detail-value">${data.phone || 'N/A'}</span>
         </div>
       </div>
       
@@ -299,19 +285,20 @@ function renderStudent(usnRaw) {
         </div>
       </div>
       
+      <!-- Personal Information -->
       <div class="detail-item">
-        <i class="fa-solid fa-user-tie"></i>
+        <i class="fa-solid fa-envelope"></i>
         <div class="detail-content">
-          <span class="detail-label">Parent/Guardian</span>
-          <span class="detail-value">${data.parentName || 'N/A'}</span>
+          <span class="detail-label">Email</span>
+          <span class="detail-value">${data.email || 'N/A'}</span>
         </div>
       </div>
       
       <div class="detail-item">
-        <i class="fa-solid fa-phone-volume"></i>
+        <i class="fa-solid fa-phone"></i>
         <div class="detail-content">
-          <span class="detail-label">Parent Contact</span>
-          <span class="detail-value">${data.parentContact || 'N/A'}</span>
+          <span class="detail-label">Phone</span>
+          <span class="detail-value">${data.phone || 'N/A'}</span>
         </div>
       </div>
       
@@ -328,6 +315,23 @@ function renderStudent(usnRaw) {
         <div class="detail-content">
           <span class="detail-label">Blood Group</span>
           <span class="detail-value">${data.bloodGroup || 'N/A'}</span>
+        </div>
+      </div>
+      
+      <!-- Parent/Guardian Information -->
+      <div class="detail-item">
+        <i class="fa-solid fa-user-tie"></i>
+        <div class="detail-content">
+          <span class="detail-label">Parent/Guardian</span>
+          <span class="detail-value">${data.parentName || 'N/A'}</span>
+        </div>
+      </div>
+      
+      <div class="detail-item">
+        <i class="fa-solid fa-phone-volume"></i>
+        <div class="detail-content">
+          <span class="detail-label">Parent Contact</span>
+          <span class="detail-value">${data.parentContact || 'N/A'}</span>
         </div>
       </div>
     </div>
@@ -386,6 +390,11 @@ if (viewBtn) {
 // On page load, if ?usn= is present, auto-load that student
 document.addEventListener('DOMContentLoaded', () => {
   const usn = getUSNfromURL();
+      // Hide "Enter Student USN" button if USN is present
+      if (enterBtn) {
+        enterBtn.style.display = 'none';
+      }
+    
   if (usn) {
     if (!document.body.contains(input)) {
       viewBtn.parentNode.insertBefore(input, viewBtn);

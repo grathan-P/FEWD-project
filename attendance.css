@@ -1,0 +1,124 @@
+/* Reuse all report styles */
+@import url('report.css');
+
+/* Page specific tweaks */
+.report-header h1 {
+  color: #a78bfa;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.highlight-usn {
+  font-weight: 600;
+  color: #38bdf8;
+}
+
+/* Light theme for subtitle and USN */
+.light-theme .subtitle {
+  color: #64748b;
+}
+
+.light-theme .highlight-usn {
+  color: #0284c7;
+}
+
+/* Attendance table cell base */
+.attendance-table td {
+  font-size: 0.95rem;
+}
+
+/* Percentage color classes */
+.perc-green {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.perc-orange {
+  color: #facc15;
+  font-weight: 600;
+}
+
+.perc-red {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+/* Light theme percentage colors - ensure visibility */
+.light-theme .perc-green {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+.light-theme .perc-orange {
+  color: #ca8a04;
+  font-weight: 700;
+}
+
+.light-theme .perc-red {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+/* Legend section */
+.attendance-legend {
+  margin-top: 25px;
+  padding: 18px 22px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  color: #cbd5e1;
+}
+
+.attendance-legend h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #e5e7eb;
+}
+
+.attendance-legend ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.attendance-legend li {
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legend-box {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.legend-green {
+  background: #22c55e;
+}
+
+.legend-orange {
+  background: #facc15;
+}
+
+.legend-red {
+  background: #ef4444;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .attendance-page .container {
+    padding: 16px;
+  }
+
+  .attendance-legend {
+    font-size: 0.9rem;
+  }
+}
+

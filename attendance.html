@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Attendance</title>
+
+  <!-- Apply theme before page renders to prevent flash (same as home) -->
+  <script>
+    (function () {
+      const theme = localStorage.getItem('site_theme') || 'dark';
+      if (theme === 'light') {
+        document.documentElement.classList.add('light-theme');
+      }
+    })();
+  </script>
+
+  <!-- Reuse home styles for navbar + global look -->
+  <link rel="stylesheet" href="home.css" />
+  <!-- Extra styles specific to attendance page -->
+  <link rel="stylesheet" href="attendance.css" />
+  
+  <!-- Icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Top Navbar (same style as home, with extra Home link) -->
+  <nav class="top-nav">
+    <div class="college-logo">
+      <img src="images/nitteLogo.png" alt="NMAMIT Logo">
+    </div>
+    <div class="nav-right">
+      <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+      <!-- New: Home link -->
+      <button id="home-link" class="home-link-btn">Home</button>
+      <div class="profile">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <button class="logout"><a href="index.html">Log Out</a></button>
+    </div>
+  </nav>
+
+  <div class="report-page">
+    <div class="page">
+      <!-- Header -->
+      <header class="report-header">
+        <h1><i class="fa-solid fa-user-check"></i> Attendance Overview</h1>
+        <p class="subtitle">
+          Subject-wise attendance details for USN:
+          <span id="attendance-usn" class="highlight-usn"></span>
+        </p>
+      </header>
+
+      <main class="container">
+        <!-- Table -->
+        <section class="report-table-section">
+          <div class="table-wrapper">
+            <table id="attendanceTable" class="report-table attendance-table">
+              <thead>
+                <tr>
+                  <th>Sl. No</th>
+                  <th>Subject</th>
+                  <th>TCC</th>
+                  <th>TCA</th>
+                  <th>Percentage</th>
+                </tr>
+              </thead>
+              <tbody id="attendance-body">
+                <!-- Filled by attendance.js -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Legend -->
+        <section class="attendance-legend">
+          <h2>Legend</h2>
+          <ul>
+            <li><span class="legend-box legend-green"></span> ≥ 85% (Good)</li>
+            <li><span class="legend-box legend-orange"></span> 75% – 84.9% (Average)</li>
+            <li><span class="legend-box legend-red"></span> &lt; 75% (Shortage)</li>
+          </ul>
+        </section>
+      </main>
+
+      <footer class="report-footer">
+        <p>&copy; 2025 Student Attendance Report. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="attendance.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
