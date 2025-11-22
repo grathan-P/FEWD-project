@@ -68,7 +68,7 @@ studentContainer.appendChild(infoDiv);
 
 // Example student DB (you can extend this)
 const studentData = {
-  '1': {
+  'NNM24CS001': {
     name: 'Riya Sharma',
     img: 'images/student1.png',
     course: 'B.Tech',
@@ -85,7 +85,7 @@ const studentData = {
     address: 'MIG-45, Sector 12, Bangalore, Karnataka',
     bloodGroup: 'O+'
   },
-  '4NM21CS002': {
+  'NNM24CS002': {
     name: 'Arjun Kumar',
     img: 'images/student1.png',
     course: 'B.Tech',
@@ -102,7 +102,7 @@ const studentData = {
     address: 'House No. 23, Jayanagar, Mangalore, Karnataka',
     bloodGroup: 'A+'
   },
-  '4NM21CS003': {
+  'NNM24CS003': {
     name: 'Sneha Patil',
     img: 'images/student1.png',
     course: 'B.Tech',
@@ -119,7 +119,7 @@ const studentData = {
     address: 'Flat 12B, Kodialbail, Mangalore, Karnataka',
     bloodGroup: 'B+'
   },
-  'NNM24CS999': {
+  'NNM24CS004': {
     name: 'rajendra jogi',
     img: 'images/student1.png',
     course: 'B.Tech',

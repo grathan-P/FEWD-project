@@ -41,9 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const marksDB = {
     // USN 1 – uses your real marks (previously NNM24CS083)
-    '1': {
+    'NNM24CS001': {
       name: 'Riya Sharma',         // or 'DRUDHA KUMAR JAIN' if you prefer
-      usn: '1',
+      usn: 'NNM24CS001',
       semesters: {
         '1': {
           label: '1st Semester',
@@ -78,9 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
     },
 
     // Second student: 4NM21CS002 (sample data)
-    '4NM21CS002': {
+    'NNM24CS002': {
       name: 'Arjun Kumar',
-      usn: '4NM21CS002',
+      usn: 'NNM24CS002',
       semesters: {
         '1': {
           label: '1st Semester',
@@ -112,9 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
     },
 
     // Third student: 4NM21CS003 (sample data with one backlog example)
-    '4NM21CS003': {
+    'NNM24CS003': {
       name: 'Sneha Patil',
-      usn: '4NM21CS003',
+      usn: 'NNM24CS003',
       semesters: {
         '1': {
           label: '1st Semester',

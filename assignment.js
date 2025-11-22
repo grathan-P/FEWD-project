@@ -51,9 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
 // Shared assignments + per-student submissions using localStorage
 
 const studentDB = {
-  '1': { name: 'Riya Sharma', img: 'images/student1.png', course: 'B.Tech - Computer Science' },
-  '4NM21CS002': { name: 'Arjun Kumar', img: 'images/student2.png', course: 'B.Tech - Information Technology' },
-  '4NM21CS003': { name: 'Sneha Patil', img: 'images/student3.png', course: 'B.Tech - E&C' },
+  'NNM24CS001': { name: 'Riya Sharma', img: 'images/student1.png', course: 'B.Tech - Computer Science' },
+  'NNM24CS002': { name: 'Arjun Kumar', img: 'images/student2.png', course: 'B.Tech - Information Technology' },
+  'NNM24CS003': { name: 'Sneha Patil', img: 'images/student3.png', course: 'B.Tech - E&C' },
 };
 
 // --- localStorage helpers ---
