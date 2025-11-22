@@ -372,12 +372,26 @@ body {
 }
 
 .primary {
-  background: linear-gradient(90deg, #7c3aed, #3b82f6);
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
   color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+}
+
+.primary i {
+  font-size: 14px;
+  transition: transform 0.3s ease;
 }
 
 .primary:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.6);
+}
+
+.primary:hover i {
+  transform: translateX(4px);
 }
 
 .secondary {

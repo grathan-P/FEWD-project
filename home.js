@@ -390,12 +390,13 @@ if (viewBtn) {
 // On page load, if ?usn= is present, auto-load that student
 document.addEventListener('DOMContentLoaded', () => {
   const usn = getUSNfromURL();
-      // Hide "Enter Student USN" button if USN is present
-      if (enterBtn) {
-        enterBtn.style.display = 'none';
-      }
     
   if (usn) {
+    // Hide "Enter Student USN" button if USN is present
+    if (enterBtn) {
+      enterBtn.style.display = 'none';
+    }
+    
     if (!document.body.contains(input)) {
       viewBtn.parentNode.insertBefore(input, viewBtn);
     }
