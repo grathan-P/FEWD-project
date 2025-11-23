@@ -67,25 +67,35 @@ studentContainer.appendChild(imgDiv);
 studentContainer.appendChild(infoDiv);
 
 // Example student DB (you can extend this)
+// Student database - loaded from JSON file
 let studentData = {};
 
-// Load student JSON file
-fetch("studentData.json")
+// Load student data from JSON file
+fetch('studentData.json')
   .then(res => res.json())
   .then(data => {
     studentData = data.students;
-    console.log("Students loaded:", studentData);
-
+    console.log('Student data loaded:', Object.keys(studentData).length, 'students');
+    
     // If URL already has a USN, load it after JSON is ready
-    const usn = getUSNfromURL();
-    if (usn) {
-      input.value = usn;
-      renderStudent(usn);
+    const usnFromURL = getUSNfromURL();
+    if (usnFromURL) {
+      // Hide "Enter Student USN" button if USN is present
+      if (enterBtn) {
+        enterBtn.style.display = 'none';
+      }
+      
+      if (!document.body.contains(input)) {
+        viewBtn.parentNode.insertBefore(input, viewBtn);
+      }
+      input.value = usnFromURL;
+      renderStudent(usnFromURL);
     }
   })
-   .catch(err => console.error("Error loading student data:", err));
-
-
+  .catch(err => {
+    console.error('Error loading student data:', err);
+    alert('Failed to load student database. Please refresh the page.');
+  });
 
 // Helper to read USN from URL (?usn=...)
 function getUSNfromURL() {
@@ -114,7 +124,7 @@ function renderStudent(usnRaw) {
   }
 
   // Check if student exists
-  const data = studentData[usn] || null;
+  const data = studentData[usn];
 
   if (!data) {
     // Student not found - show error message only
@@ -155,20 +165,19 @@ function renderStudent(usnRaw) {
     <p>Branch: ${data.branch}</p>
   `;
 
-  // Action buttons (Assignments / Attendance / Report)
-  actionButtons.innerHTML = `
-    <button class="btn student-btn assignment-btn">Assignments</button>
+   // Action buttons (Attendance / Report)
+   // Extra-Curricular button removed as requested (was: <button class="btn student-btn extra-btn">Extra-Curricular</button>)
+   actionButtons.innerHTML = `
+    <!-- Extra-Curricular button intentionally removed -->
     <button class="btn student-btn attendance-btn">Attendance</button>
     <button class="btn student-btn report-btn">Report</button>
-  `;
+   `;
 
-  const assignmentBtn = actionButtons.querySelector('.assignment-btn');
   const attendanceBtn = actionButtons.querySelector('.attendance-btn');
   const reportBtn = actionButtons.querySelector('.report-btn');
 
-  assignmentBtn.addEventListener('click', () => {
-    window.location.href = `assignment.html?usn=${encodeURIComponent(usn)}`;
-  });
+// Extra-Curricular button removed: no event listener needed
+
 
   attendanceBtn.addEventListener('click', () => {
     window.location.href = `attendance.html?usn=${encodeURIComponent(usn)}`;
@@ -337,18 +346,5 @@ if (viewBtn) {
 }
 
 // On page load, if ?usn= is present, auto-load that student
-document.addEventListener('DOMContentLoaded', () => {
-  const usn = getUSNfromURL();
-      // Hide "Enter Student USN" button if USN is present
-      if (enterBtn) {
-        enterBtn.style.display = 'none';
-      }
-    
-  if (usn) {
-    if (!document.body.contains(input)) {
-      viewBtn.parentNode.insertBefore(input, viewBtn);
-    }
-    input.value = usn;
-    renderStudent(usn);
-  }
-});
+// Note: Student data loading happens automatically when the JSON file loads
+// The DOMContentLoaded event is already handled in the theme section at the top
