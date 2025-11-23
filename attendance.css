@@ -31,94 +31,309 @@
   font-size: 0.95rem;
 }
 
-/* Percentage color classes */
-.perc-green {
-  color: #22c55e;
+/* Standard table styling */
+.attendance-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  font-size: 16px;
+}
+
+/* Header Row */
+.attendance-table thead tr {
+  background: linear-gradient(90deg, #6a5af9, #8b5cf6);
+  color: #fff;
+}
+
+.attendance-table thead th {
+  padding: 15px;
+  text-align: left;
   font-weight: 600;
+  border-radius: 10px 10px 0 0;
 }
 
-.perc-orange {
-  color: #facc15;
-  font-weight: 600;
-}
-
-.perc-red {
-  color: #ef4444;
-  font-weight: 600;
-}
-
-/* Light theme percentage colors - ensure visibility */
-.light-theme .perc-green {
-  color: #16a34a;
-  font-weight: 700;
-}
-
-.light-theme .perc-orange {
-  color: #ca8a04;
-  font-weight: 700;
-}
-
-.light-theme .perc-red {
-  color: #dc2626;
-  font-weight: 700;
-}
-
-/* Legend section */
-.attendance-legend {
-  margin-top: 25px;
-  padding: 18px 22px;
+/* Body rows */
+.attendance-table tbody tr {
+  background: rgba(255, 255, 255, 0.04);
+  transition: 0.25s ease;
   border-radius: 12px;
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(148, 163, 184, 0.25);
-  color: #cbd5e1;
+}
+
+/* Cells */
+.attendance-table tbody td {
+  padding: 14px 18px;
+  color: #e5e7eb;
+}
+
+/* Hover effect */
+.attendance-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.01);
+}
+
+/* Rounded corners on each row */
+.attendance-table tbody tr td:first-child {
+  border-radius: 12px 0 0 12px;
+}
+.attendance-table tbody tr td:last-child {
+  border-radius: 0 12px 12px 0;
+}
+
+/* Percentage Colors */
+.perc-green {
+  color: #4ade80 !important;
+  font-weight: 600;
+}
+.perc-orange {
+  color: #fbbf24 !important;
+  font-weight: 600;
+}
+.perc-red {
+  color: #f87171 !important;
+  font-weight: 600;
+}
+
+/* Legend Panel */
+.attendance-legend {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px 25px;
+  border-radius: 14px;
+  margin-top: 25px;
 }
 
 .attendance-legend h2 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  color: #e5e7eb;
+  margin-bottom: 12px;
+  color: #cfcaff;
 }
 
 .attendance-legend ul {
   list-style: none;
   padding: 0;
-  margin: 0;
-}
-
-.attendance-legend li {
-  margin-bottom: 6px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
 .legend-box {
-  width: 14px;
-  height: 14px;
-  border-radius: 3px;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  border-radius: 4px;
   display: inline-block;
 }
 
-.legend-green {
-  background: #22c55e;
-}
+.legend-green { background: #4ade80; }
+.legend-orange { background: #fbbf24; }
+.legend-red { background: #f87171; }
 
-.legend-orange {
-  background: #facc15;
-}
+/* ===== RESPONSIVE DESIGN ===== */
 
-.legend-red {
-  background: #ef4444;
-}
+/* Large tablets and small desktops (992px and below) */
+@media (max-width: 992px) {
+  .report-page {
+    padding: 20px 15px;
+  }
 
-/* Responsive tweaks */
-@media (max-width: 900px) {
-  .attendance-page .container {
-    padding: 16px;
+  .report-header h1 {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .attendance-table {
+    font-size: 15px;
+  }
+
+  .attendance-table thead th {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .attendance-table tbody td {
+    padding: 12px 15px;
+    font-size: 14px;
   }
 
   .attendance-legend {
-    font-size: 0.9rem;
+    padding: 18px 20px;
+  }
+
+  .attendance-legend h2 {
+    font-size: 18px;
+  }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .report-page {
+    padding: 15px 10px;
+  }
+
+  .report-header h1 {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  /* Make table scrollable horizontally */
+  .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 12px;
+  }
+
+  .attendance-table {
+    font-size: 14px;
+    min-width: 600px;
+  }
+
+  .attendance-table thead th {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .attendance-table tbody td {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .attendance-legend {
+    padding: 15px 18px;
+  }
+
+  .attendance-legend h2 {
+    font-size: 16px;
+  }
+
+  .attendance-legend ul li {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .legend-box {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* Mobile phones (480px and below) */
+@media (max-width: 480px) {
+  .report-page {
+    padding: 10px 8px;
+  }
+
+  .report-header {
+    padding: 15px 10px;
+  }
+
+  .report-header h1 {
+    font-size: 20px;
+  }
+
+  .report-header h1 i {
+    font-size: 18px;
+  }
+
+  .subtitle {
+    font-size: 11px;
+    margin-top: 6px;
+  }
+
+  .highlight-usn {
+    display: block;
+    margin-top: 4px;
+    font-size: 13px;
+  }
+
+  /* Scrollable table with compact design */
+  .table-wrapper {
+    width: 100%;
+    overflow-x: hidden !important;    /* remove horizontal scroll */
+    display: block;
+}
+ .attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;             /* very important */
+}
+
+  .attendance-table thead th {
+    padding: 8px 6px;
+    font-size: 11px;
+  }
+
+  .attendance-table tbody td {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+
+  .attendance-table tbody tr td:first-child {
+    border-radius: 8px 0 0 8px;
+  }
+  
+  .attendance-table tbody tr td:last-child {
+    border-radius: 0 8px 8px 0;
+  }
+
+  .attendance-legend {
+    padding: 12px 15px;
+    margin-top: 15px;
+  }
+
+  .attendance-legend h2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .attendance-legend ul li {
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+
+  .legend-box {
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+  }
+
+  .report-footer {
+    padding: 12px;
+    font-size: 10px;
+  }
+}
+
+/* Extra small phones (360px and below) */
+@media (max-width: 360px) {
+  .report-header h1 {
+    font-size: 18px;
+  }
+
+  .subtitle {
+    font-size: 10px;
+  }
+
+  .attendance-table {
+    min-width: 500px;
+    font-size: 11px;
+  }
+
+  .attendance-table thead th {
+    padding: 6px 4px;
+    font-size: 10px;
+  }
+
+  .attendance-table tbody td {
+    padding: 6px 4px;
+    font-size: 11px;
+  }
+
+  .attendance-legend h2 {
+    font-size: 13px;
+  }
+
+  .attendance-legend ul li {
+    font-size: 10px;
   }
 }
 

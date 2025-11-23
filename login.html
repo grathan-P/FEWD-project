@@ -45,9 +45,12 @@
         <h1>Teacher Login Portal</h1>
         <p>Access your teaching resources and manage your classes efficiently.</p>
         <div>
-        <form action="home.html">
-            <input type="text" placeholder="Enter your ID" required>
-            <input type="password" placeholder="Enter your Password" required>
+        <form>
+            <input type="text" id="teacherId" name="teacherId" placeholder="Enter your Teacher ID" required>
+            <span id="idFeedback"></span>
+            
+            <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+            <span id="passwordFeedback"></span>
           
             </div>
             <div class="buttons">
@@ -110,6 +113,9 @@
 
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<!-- Form Validation Script -->
+<script src="login.js"></script>
 
 <script>
   // Theme toggle functionality

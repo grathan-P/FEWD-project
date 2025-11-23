@@ -106,6 +106,26 @@ body {
     border-radius: 10px;
 }
 
+/* Validation feedback styles */
+#idFeedback,
+#passwordFeedback {
+    display: block;
+    font-size: 12px;
+    margin-top: -5px;
+    margin-bottom: 8px;
+    min-height: 16px;
+}
+
+#idFeedback.error,
+#passwordFeedback.error {
+    color: #ef4444;
+}
+
+#idFeedback.valid,
+#passwordFeedback.valid {
+    color: #22c55e;
+}
+
 .btn {
   padding: 12px 25px;
   border-radius: 8px;
@@ -387,6 +407,17 @@ body {
 
 .light-theme .login-teacher input::placeholder {
   color: #64748b !important;
+}
+
+/* Light theme validation feedback */
+.light-theme #idFeedback.error,
+.light-theme #passwordFeedback.error {
+  color: #dc2626 !important;
+}
+
+.light-theme #idFeedback.valid,
+.light-theme #passwordFeedback.valid {
+  color: #16a34a !important;
 }
 
 .light-theme .profile a {
