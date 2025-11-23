@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extra-Curricular</title>
+  <link rel="stylesheet" href="extra.css" />
+  <!-- Prevent theme flash -->
+  <script>
+    (function() {
+      const theme = localStorage.getItem('site_theme') || 'dark';
+      if (theme === 'light') document.documentElement.classList.add('light-theme');
+    })();
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="extra.js" defer></script>
+</head>
+<body>
+  <!-- TOP NAV -->
+  <nav class="top-nav">
+    <div class="college-logo">
+      <img src="images/nitteLogo.png" alt="NMAMIT Logo" />
+    </div>
+    <div class="nav-right">
+      <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+      <button id="home-link" class="home-link-btn">Home</button>
+      <div class="profile">
+        <a href="profile.html"><i class="fa-solid fa-user"></i></a>
+      </div>
+      <button class="logout"><a href="index.html">Log Out</a></button>
+    </div>
+  </nav>
+
+  <div class="extra-page">
+    <!-- Sidebar -->
+    <aside class="extra-sidebar">
+      <h2 class="sidebar-title">Extra-Curricular</h2>
+      <ul>
+        <li class="tab active" data-section="events"><i class="fa-solid fa-calendar-check"></i><span>Events</span></li>
+        <li class="tab" data-section="achievements"><i class="fa-solid fa-award"></i><span>Certificates</span></li>
+        <li class="tab" data-section="credits"><i class="fa-solid fa-star"></i><span>Credits</span></li>
+        <li class="tab" data-section="roles"><i class="fa-solid fa-user-gear"></i><span>Roles</span></li>
+      </ul>
+      <div class="usn-info-box">
+        <p>USN: <span id="extra-usn">—</span></p>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="extra-main">
+      <header class="extra-header">
+        <h1><i class="fa-solid fa-layer-group"></i> Student Extra-Curricular Profile</h1>
+        <p class="extra-sub">Explore events, certifications, credits and leadership roles.</p>
+      </header>
+      <div class="div-main">
+        <div id="extra-content" class="content-box">
+          <!-- Dynamic content injected here -->
+        </div>
+      </div>
+      <section class="certificate-note">
+        <p><i class="fa-solid fa-circle-info"></i> Certificates shown below are placeholders. Replace <code>images/certificate-sample.png</code> with real scanned certificates.</p>
+      </section>
+    </main>
+  </div>
+
+  <footer class="extra-footer">
+    <p>&copy; 2025 NMAMIT Extra-Curricular Records</p>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

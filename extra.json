@@ -1,0 +1,149 @@
+{
+  "NNM24CS001": {
+    "eventsParticipated": [
+      {
+      "title": "Hackathon – NMAMIT 2024",
+      "date": "13-04-2024",
+      "role": "Participant",
+      "venue": "NMAM Institute of Technology, Nitte"
+    },
+    {
+      "title": "Web Development Workshop",
+      "date": "15-03-2024",
+      "role": "Attendee",
+      "venue": "VVIT Campus"
+    },
+    {
+      "title": "Paper Presentation – TechFusion",
+      "date": "21-12-2023",
+      "role": "Finalist",
+      "venue": "SJEC Mangalore"
+    }
+    ],
+    "achievements": [
+      "1st Place – Coding Challenge 2024",
+      "Finalist – State-Level Project Expo 2023"
+    ],
+    "certificates": [
+      { "title": "Coding Challenge 2024 Winner", "file": "certificates/sample-certificate.pdf" },
+      { "title": "Project Expo 2023 Finalist", "file": "certificates/sample-certificate.pdf" }
+    ],
+    "credits": [
+      "NCC Camp – 2 Credits",
+      "Workshop Participation – 1 Credit"
+    ],
+    "roles": [
+      "Class Representative (2024–25)",
+      "Event Organizer – TechNIT Club"
+    ]
+  },
+
+  "NNM24CS002": {
+    "eventsParticipated": [
+        {
+      "title": "Hackathon – NMAMIT 2024",
+      "date": "13-04-2024",
+      "role": "Participant",
+      "venue": "NMAM Institute of Technology, Nitte"
+    },
+    {
+      "title": "Web Development Workshop",
+      "date": "15-03-2024",
+      "role": "Attendee",
+      "venue": "VVIT Campus"
+    },
+    {
+      "title": "Paper Presentation – TechFusion",
+      "date": "21-12-2023",
+      "role": "Finalist",
+      "venue": "SJEC Mangalore"
+    }
+    ],
+    "achievements": ["2nd Prize – UI/UX Vizathon"],
+    "certificates": [
+      { "title": "UI/UX Vizathon 2nd Prize", "file": "certificates/sample-certificate.pdf" }
+    ],
+    "credits": ["Sports Activity – 1 Credit"],
+    "roles": ["Team Lead – Mini Project Group 5"]
+  },
+
+  "NNM24CS003": {
+    "eventsParticipated": [
+        {
+      "title": "Hackathon – NMAMIT 2024",
+      "date": "13-04-2024",
+      "role": "Participant",
+      "venue": "NMAM Institute of Technology, Nitte"
+    },
+    {
+      "title": "Web Development Workshop",
+      "date": "15-03-2024",
+      "role": "Attendee",
+      "venue": "VVIT Campus"
+    },
+    {
+      "title": "Paper Presentation – TechFusion",
+      "date": "21-12-2023",
+      "role": "Finalist",
+      "venue": "SJEC Mangalore"
+    }
+    ],
+    "achievements": [],
+    "certificates": [],
+    "credits": [],
+    "roles": []
+  },
+
+  "NNM24CS004": {
+    "eventsParticipated": [
+      {
+        "title": "AI Bootcamp",
+        "date": "05-02-2024",
+        "role": "Participant",
+        "venue": "Online"
+      },
+      {
+        "title": "Cyber Security Seminar",
+        "date": "22-06-2024",
+        "role": "Attendee",
+        "venue": "NMAMIT Auditorium"
+      }
+    ],
+    "achievements": ["Top 5 – College Coding Contest"],
+    "certificates": [
+      { "title": "College Coding Contest Top 5", "file": "certificates/sample-certificate.pdf" }
+    ],
+    "credits": ["Sports – 1 Credit", "Workshop – 1 Credit"],
+    "roles": ["Volunteer – TechFest 2024"]
+  },
+
+  "NNM24CS005": {
+    "eventsParticipated": [
+      {
+        "title": "Robotics Expo",
+        "date": "18-07-2024",
+        "role": "Presenter",
+        "venue": "Innovation Lab"
+      },
+      {
+        "title": "Data Science Webinar",
+        "date": "02-08-2024",
+        "role": "Attendee",
+        "venue": "Online"
+      },
+      {
+        "title": "Open Source Sprint",
+        "date": "12-09-2024",
+        "role": "Contributor",
+        "venue": "Github Remote"
+      }
+    ],
+    "achievements": ["Project Expo – Runner Up", "Certificate – Python Essentials"],
+    "certificates": [
+      { "title": "Project Expo Runner Up", "file": "certificates/sample-certificate.pdf" },
+      { "title": "Python Essentials", "file": "certificates/sample-certificate.pdf" }
+    ],
+    "credits": ["Community Service – 2 Credits"],
+    "roles": ["Team Lead – Robotics Project", "Mentor – Coding Club"]
+  }
+}

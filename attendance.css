@@ -93,6 +93,37 @@
   font-weight: 600;
 }
 
+/* ===== LIGHT THEME OVERRIDES ===== */
+.light-theme .report-header h1 { color:#7c3aed; }
+.light-theme .subtitle { color:#475569; }
+.light-theme .highlight-usn { color:#0ea5e9; }
+
+.light-theme .attendance-table thead tr {
+  background: linear-gradient(90deg,#7c3aed,#3b82f6);
+  color:#fff;
+}
+.light-theme .attendance-table tbody tr {
+  background: rgba(124,58,237,0.08);
+}
+.light-theme .attendance-table tbody tr:hover {
+  background: rgba(124,58,237,0.15);
+}
+.light-theme .attendance-table tbody td {
+  color:#1e293b;
+}
+.light-theme .perc-green { color:#16a34a !important; }
+.light-theme .perc-orange { color:#d97706 !important; }
+.light-theme .perc-red { color:#dc2626 !important; }
+
+.light-theme .attendance-legend {
+  background: rgba(124,58,237,0.08);
+  color:#1e293b;
+}
+.light-theme .attendance-legend h2 { color:#7c3aed; }
+.light-theme .legend-green { background:#16a34a; }
+.light-theme .legend-orange { background:#d97706; }
+.light-theme .legend-red { background:#dc2626; }
+
 /* Legend Panel */
 .attendance-legend {
   background: rgba(255, 255, 255, 0.05);
@@ -246,17 +277,16 @@
     font-size: 13px;
   }
 
-  /* Scrollable table with compact design */
+  /* Allow horizontal scroll if needed rather than cramped fixed layout */
   .table-wrapper {
-    width: 100%;
-    overflow-x: hidden !important;    /* remove horizontal scroll */
-    display: block;
-}
- .attendance-table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;             /* very important */
-}
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .attendance-table {
+    min-width: 520px; /* maintain readability */
+    border-collapse: separate;
+    table-layout: auto;
+  }
 
   .attendance-table thead th {
     padding: 8px 6px;
@@ -314,7 +344,7 @@
   }
 
   .attendance-table {
-    min-width: 500px;
+    min-width: 480px;
     font-size: 11px;
   }
 

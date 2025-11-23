@@ -206,20 +206,19 @@ function renderStudent(usnRaw) {
     <p>Branch: ${data.branch}</p>
   `;
 
-  // Action buttons (Assignments / Attendance / Report)
-  actionButtons.innerHTML = `
-    <button class="btn student-btn assignment-btn">Assignments</button>
+   // Action buttons (Attendance / Report)
+   // Extra-Curricular button removed as requested (was: <button class="btn student-btn extra-btn">Extra-Curricular</button>)
+   actionButtons.innerHTML = `
+    <!-- Extra-Curricular button intentionally removed -->
     <button class="btn student-btn attendance-btn">Attendance</button>
     <button class="btn student-btn report-btn">Report</button>
-  `;
+   `;
 
-  const assignmentBtn = actionButtons.querySelector('.assignment-btn');
   const attendanceBtn = actionButtons.querySelector('.attendance-btn');
   const reportBtn = actionButtons.querySelector('.report-btn');
 
-  assignmentBtn.addEventListener('click', () => {
-    window.location.href = `assignment.html?usn=${encodeURIComponent(usn)}`;
-  });
+// Extra-Curricular button removed: no event listener needed
+
 
   attendanceBtn.addEventListener('click', () => {
     window.location.href = `attendance.html?usn=${encodeURIComponent(usn)}`;
