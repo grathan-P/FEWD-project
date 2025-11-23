@@ -37,115 +37,21 @@ document.addEventListener('DOMContentLoaded', () => {
   loadThemeReport();
 
   // ---------------- MARKS DATABASE ----------------
-  // USN "1" + two more students.
+  const marksDB = {};
 
-  const marksDB = {
-    // USN 1 – uses your real marks (previously NNM24CS083)
-    'NNM24CS001': {
-      name: 'Riya Sharma',         // or 'DRUDHA KUMAR JAIN' if you prefer
-      usn: 'NNM24CS001',
-      semesters: {
-        '1': {
-          label: '1st Semester',
-          officialSgpa: 9.9,
-          subjects: [
-            { code:'MA1002-1', title:'Calculus and Differential Equations',        credits:3, gradePoints:10, grade:'O',  remarks:'Pass' },
-            { code:'PH1004-1', title:'Quantum Computing and Modern Physics',       credits:4, gradePoints:10, grade:'O',  remarks:'Pass' },
-            { code:'CS1001-2', title:'Problem Solving through Programming',        credits:4, gradePoints:10, grade:'O',  remarks:'Pass' },
-            { code:'EC1001-1', title:'Basic Electronics',                          credits:3, gradePoints:10, grade:'O',  remarks:'Pass' },
-            { code:'IS1101-1', title:'Fundamentals of Cyber Security',             credits:3, gradePoints:10, grade:'O',  remarks:'Pass' },
-            { code:'HU1001-1', title:'Technical English',                          credits:2, gradePoints:9,  grade:'A+', remarks:'Pass' },
-            { code:'HU1002-1', title:'Constitution of India',                      credits:1, gradePoints:10, grade:'O',  remarks:'Pass' },
-            { code:'MA1006-1', title:'Mathematics with MATLAB',                    credits:1, gradePoints:10, grade:'O',  remarks:'Pass' }
-          ]
-        },
-        '2': {
-          label: '2nd Semester',
-          officialSgpa: 9.95,
-          subjects: [
-            { code:'MA1007-1', title:'Discrete Mathematics and Transform Techniques',      credits:4, gradePoints:10, grade:'O',  remarks:'Pass' },
-            { code:'CY1003-1', title:'Materials Chemistry for Computer Systems',          credits:4, gradePoints:10, grade:'O',  remarks:'Pass' },
-            { code:'EC1002-2', title:'Applied Digital Logic Design',                      credits:3, gradePoints:10, grade:'O',  remarks:'Pass' },
-            { code:'CS1005-2', title:'Introduction to Python Programming',                credits:3, gradePoints:10, grade:'O',  remarks:'Pass' },
-            { code:'EE1001-2', title:'Basic Electrical Engineering',                      credits:3, gradePoints:10, grade:'O',  remarks:'Pass' },
-            { code:'BT1651-1', title:'Biology for Engineers',                             credits:1, gradePoints:9,  grade:'A+', remarks:'Pass' },
-            { code:'ME1004-1', title:'Engineering Visualization',                         credits:1, gradePoints:10, grade:'O',  remarks:'Pass' },
-            { code:'CV1005-1', title:'Environmental Studies and Sustainability',          credits:0, gradePoints:0,  grade:'PP', remarks:'Pass' }
-          ]
-        }
-      },
-      officialCgpa: 9.93
-    },
+  fetch("report.json")
+    .then(res => res.json())
+    .then(data => {
+      Object.assign(marksDB, data);
+      initializeReportPage(marksDB);   // Only run after JSON is ready
+    })
+    .catch(err => {
+      console.error("Error loading report.json:", err);
+      initializeReportPage(marksDB);   // Try to load (no data)
+    });
+});
 
-    // Second student: 4NM21CS002 (sample data)
-    'NNM24CS002': {
-      name: 'Arjun Kumar',
-      usn: 'NNM24CS002',
-      semesters: {
-        '1': {
-          label: '1st Semester',
-          subjects: [
-            { code:'MA1002-1', title:'Calculus and Differential Equations',        credits:3, gradePoints:9, grade:'A+', remarks:'Pass' },
-            { code:'PH1004-1', title:'Quantum Computing and Modern Physics',       credits:4, gradePoints:8, grade:'A',  remarks:'Pass' },
-            { code:'CS1001-2', title:'Problem Solving through Programming',        credits:4, gradePoints:9, grade:'A+', remarks:'Pass' },
-            { code:'EC1001-1', title:'Basic Electronics',                          credits:3, gradePoints:8, grade:'A',  remarks:'Pass' },
-            { code:'IS1101-1', title:'Fundamentals of Cyber Security',             credits:3, gradePoints:9, grade:'A+', remarks:'Pass' },
-            { code:'HU1001-1', title:'Technical English',                          credits:2, gradePoints:8, grade:'A',  remarks:'Pass' },
-            { code:'HU1002-1', title:'Constitution of India',                      credits:1, gradePoints:10,grade:'O',  remarks:'Pass' },
-            { code:'MA1006-1', title:'Mathematics with MATLAB',                    credits:1, gradePoints:9, grade:'A+', remarks:'Pass' }
-          ]
-        },
-        '2': {
-          label: '2nd Semester',
-          subjects: [
-            { code:'MA1007-1', title:'Discrete Mathematics and Transform Techniques',      credits:4, gradePoints:8, grade:'A',  remarks:'Pass' },
-            { code:'CY1003-1', title:'Materials Chemistry for Computer Systems',          credits:4, gradePoints:8, grade:'A',  remarks:'Pass' },
-            { code:'EC1002-2', title:'Applied Digital Logic Design',                      credits:3, gradePoints:9, grade:'A+', remarks:'Pass' },
-            { code:'CS1005-2', title:'Introduction to Python Programming',                credits:3, gradePoints:9, grade:'A+', remarks:'Pass' },
-            { code:'EE1001-2', title:'Basic Electrical Engineering',                      credits:3, gradePoints:8, grade:'A',  remarks:'Pass' },
-            { code:'BT1651-1', title:'Biology for Engineers',                             credits:1, gradePoints:8, grade:'A',  remarks:'Pass' },
-            { code:'ME1004-1', title:'Engineering Visualization',                         credits:1, gradePoints:9, grade:'A+', remarks:'Pass' },
-            { code:'CV1005-1', title:'Environmental Studies and Sustainability',          credits:0, gradePoints:0, grade:'PP', remarks:'Pass' }
-          ]
-        }
-      }
-    },
-
-    // Third student: 4NM21CS003 (sample data with one backlog example)
-    'NNM24CS003': {
-      name: 'Sneha Patil',
-      usn: 'NNM24CS003',
-      semesters: {
-        '1': {
-          label: '1st Semester',
-          subjects: [
-            { code:'MA1002-1', title:'Calculus and Differential Equations',        credits:3, gradePoints:8, grade:'A',  remarks:'Pass' },
-            { code:'PH1004-1', title:'Quantum Computing and Modern Physics',       credits:4, gradePoints:9, grade:'A+', remarks:'Pass' },
-            { code:'CS1001-2', title:'Problem Solving through Programming',        credits:4, gradePoints:9, grade:'A+', remarks:'Pass' },
-            { code:'EC1001-1', title:'Basic Electronics',                          credits:3, gradePoints:7, grade:'B+', remarks:'Pass' },
-            { code:'IS1101-1', title:'Fundamentals of Cyber Security',             credits:3, gradePoints:8, grade:'A',  remarks:'Pass' },
-            { code:'HU1001-1', title:'Technical English',                          credits:2, gradePoints:9, grade:'A+', remarks:'Pass' },
-            { code:'HU1002-1', title:'Constitution of India',                      credits:1, gradePoints:10,grade:'O',  remarks:'Pass' },
-            { code:'MA1006-1', title:'Mathematics with MATLAB',                    credits:1, gradePoints:8, grade:'A',  remarks:'Pass' }
-          ]
-        },
-        '2': {
-          label: '2nd Semester',
-          subjects: [
-            { code:'MA1007-1', title:'Discrete Mathematics and Transform Techniques',      credits:4, gradePoints:8, grade:'A',  remarks:'Pass' },
-            { code:'CY1003-1', title:'Materials Chemistry for Computer Systems',          credits:4, gradePoints:7, grade:'B+', remarks:'Pass' },
-            { code:'EC1002-2', title:'Applied Digital Logic Design',                      credits:3, gradePoints:0, grade:'F',  remarks:'Fail' },  // backlog
-            { code:'CS1005-2', title:'Introduction to Python Programming',                credits:3, gradePoints:8, grade:'A',  remarks:'Pass' },
-            { code:'EE1001-2', title:'Basic Electrical Engineering',                      credits:3, gradePoints:7, grade:'B+', remarks:'Pass' },
-            { code:'BT1651-1', title:'Biology for Engineers',                             credits:1, gradePoints:8, grade:'A',  remarks:'Pass' },
-            { code:'ME1004-1', title:'Engineering Visualization',                         credits:1, gradePoints:9, grade:'A+', remarks:'Pass' },
-            { code:'CV1005-1', title:'Environmental Studies and Sustainability',          credits:0, gradePoints:0, grade:'PP', remarks:'Pass' }
-          ]
-        }
-      }
-    }
-  };
-
+function initializeReportPage(marksDB) {
   // ---------------- DOM ELEMENTS ----------------
   const nameInput = document.getElementById('stuName');
   const usnInput  = document.getElementById('stuUSN');
@@ -318,4 +224,4 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.href = 'home.html?usn=' + encodeURIComponent(record.usn);
     });
   }
-});
+}

@@ -1,0 +1,468 @@
+{
+  "NNM24CS086": {"name": "Anaya Reddy","usn": "NNM24CS086","semesters": {
+      "1": {
+        "label": "1st Semester",
+        "subjects": [
+          {"code":"MA1002-1","title":"Calculus and Differential Equations","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"PH1004-1","title":"Quantum Computing and Modern Physics","credits":4,"gradePoints":10,"grade":"O","remarks":"Pass"},
+          {"code":"CS1001-2","title":"Problem Solving through Programming","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"EC1001-1","title":"Basic Electronics","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"IS1101-1","title":"Fundamentals of Cyber Security","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"HU1001-1","title":"Technical English","credits":2,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"HU1002-1","title":"Constitution of India","credits":1,"gradePoints":10,"grade":"O","remarks":"Pass"},
+          {"code":"MA1006-1","title":"Mathematics with MATLAB","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"}
+        ]
+      },
+      "2": {
+        "label": "2nd Semester",
+        "subjects": [
+          {"code":"MA1007-1","title":"Discrete Mathematics and Transform Techniques","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CY1003-1","title":"Materials Chemistry for Computer Systems","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EC1002-2","title":"Applied Digital Logic Design","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CS1005-2","title":"Introduction to Python Programming","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EE1001-2","title":"Basic Electrical Engineering","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"BT1651-1","title":"Biology for Engineers","credits":1,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"ME1004-1","title":"Engineering Visualization","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CV1005-1","title":"Environmental Studies and Sustainability","credits":0,"gradePoints":0,"grade":"PP","remarks":"Pass"}
+        ]
+      }
+    },
+    "officialCgpa": 9.15
+  },
+
+  "NNM24CS087": {"name": "Vivaan Kumar","usn": "NNM24CS087","semesters": {
+      "1": {
+        "label": "1st Semester",
+        "subjects": [
+          {"code":"MA1002-1","title":"Calculus and Differential Equations","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"PH1004-1","title":"Quantum Computing and Modern Physics","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CS1001-2","title":"Problem Solving through Programming","credits":4,"gradePoints":7,"grade":"B+","remarks":"Pass"},
+          {"code":"EC1001-1","title":"Basic Electronics","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"IS1101-1","title":"Fundamentals of Cyber Security","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"HU1001-1","title":"Technical English","credits":2,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"HU1002-1","title":"Constitution of India","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"MA1006-1","title":"Mathematics with MATLAB","credits":1,"gradePoints":10,"grade":"O","remarks":"Pass"}
+        ]
+      },
+      "2": {
+        "label": "2nd Semester",
+        "subjects": [
+          {"code":"MA1007-1","title":"Discrete Mathematics and Transform Techniques","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"CY1003-1","title":"Materials Chemistry for Computer Systems","credits":4,"gradePoints":7,"grade":"B+","remarks":"Pass"},
+          {"code":"EC1002-2","title":"Applied Digital Logic Design","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CS1005-2","title":"Introduction to Python Programming","credits":3,"gradePoints":7,"grade":"B+","remarks":"Pass"},
+          {"code":"EE1001-2","title":"Basic Electrical Engineering","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"BT1651-1","title":"Biology for Engineers","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"ME1004-1","title":"Engineering Visualization","credits":1,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"CV1005-1","title":"Environmental Studies and Sustainability","credits":0,"gradePoints":0,"grade":"PP","remarks":"Pass"}
+        ]
+      }
+    },
+    "officialCgpa": 8.80
+  },
+  
+  "NNM24CS088": {"name": "Ishaan Mehta","usn": "NNM24CS088","semesters": {
+      "1": {
+        "label": "1st Semester",
+        "subjects": [
+          {"code":"MA1002-1","title":"Calculus and Differential Equations","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"PH1004-1","title":"Quantum Computing and Modern Physics","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CS1001-2","title":"Problem Solving through Programming","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EC1001-1","title":"Basic Electronics","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"IS1101-1","title":"Fundamentals of Cyber Security","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"HU1001-1","title":"Technical English","credits":2,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"HU1002-1","title":"Constitution of India","credits":1,"gradePoints":10,"grade":"O","remarks":"Pass"},
+          {"code":"MA1006-1","title":"Mathematics with MATLAB","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"}
+        ]
+      },
+      "2": {
+        "label": "2nd Semester",
+        "subjects": [
+          {"code":"MA1007-1","title":"Discrete Mathematics and Transform Techniques","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CY1003-1","title":"Materials Chemistry for Computer Systems","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EC1002-2","title":"Applied Digital Logic Design","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"CS1005-2","title":"Introduction to Python Programming","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"EE1001-2","title":"Basic Electrical Engineering","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"BT1651-1","title":"Biology for Engineers","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"ME1004-1","title":"Engineering Visualization","credits":1,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"CV1005-1","title":"Environmental Studies and Sustainability","credits":0,"gradePoints":0,"grade":"PP","remarks":"Pass"}
+        ]
+      }
+    },
+    "officialCgpa": 8.95
+  },
+
+  "NNM24CS089": {"name": "Kavya Iyer","usn": "NNM24CS089","semesters": {
+      "1": {
+        "label": "1st Semester",
+        "subjects": [
+          {"code":"MA1002-1","title":"Calculus and Differential Equations","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"PH1004-1","title":"Quantum Computing and Modern Physics","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CS1001-2","title":"Problem Solving through Programming","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EC1001-1","title":"Basic Electronics","credits":3,"gradePoints":7,"grade":"B+","remarks":"Pass"},
+          {"code":"IS1101-1","title":"Fundamentals of Cyber Security","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"HU1001-1","title":"Technical English","credits":2,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"HU1002-1","title":"Constitution of India","credits":1,"gradePoints":10,"grade":"O","remarks":"Pass"},
+          {"code":"MA1006-1","title":"Mathematics with MATLAB","credits":1,"gradePoints":8,"grade":"A","remarks":"Pass"}
+        ]
+      },
+      "2": {
+        "label": "2nd Semester",
+        "subjects": [
+          {"code":"MA1007-1","title":"Discrete Mathematics and Transform Techniques","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CY1003-1","title":"Materials Chemistry for Computer Systems","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EC1002-2","title":"Applied Digital Logic Design","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CS1005-2","title":"Introduction to Python Programming","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EE1001-2","title":"Basic Electrical Engineering","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"BT1651-1","title":"Biology for Engineers","credits":1,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"ME1004-1","title":"Engineering Visualization","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CV1005-1","title":"Environmental Studies and Sustainability","credits":0,"gradePoints":0,"grade":"PP","remarks":"Pass"}
+        ]
+      }
+    },
+    "officialCgpa": 9.00
+  },
+
+  "NNM24CS090": {"name": "Aditya Singh","usn": "NNM24CS090","semesters": {
+      "1": {
+        "label": "1st Semester",
+        "subjects": [
+          {"code":"MA1002-1","title":"Calculus and Differential Equations","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"PH1004-1","title":"Quantum Computing and Modern Physics","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CS1001-2","title":"Problem Solving through Programming","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"EC1001-1","title":"Basic Electronics","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"IS1101-1","title":"Fundamentals of Cyber Security","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"HU1001-1","title":"Technical English","credits":2,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"HU1002-1","title":"Constitution of India","credits":1,"gradePoints":10,"grade":"O","remarks":"Pass"},
+          {"code":"MA1006-1","title":"Mathematics with MATLAB","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"}
+        ]
+      },
+      "2": {
+        "label": "2nd Semester",
+        "subjects": [
+          {"code":"MA1007-1","title":"Discrete Mathematics and Transform Techniques","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CY1003-1","title":"Materials Chemistry for Computer Systems","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EC1002-2","title":"Applied Digital Logic Design","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"CS1005-2","title":"Introduction to Python Programming","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"EE1001-2","title":"Basic Electrical Engineering","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"BT1651-1","title":"Biology for Engineers","credits":1,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"ME1004-1","title":"Engineering Visualization","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CV1005-1","title":"Environmental Studies and Sustainability","credits":0,"gradePoints":0,"grade":"PP","remarks":"Pass"}
+        ]
+      }
+    },
+    "officialCgpa": 9.10
+  },
+
+  "NNM24CS091": {"name": "Mihika Nair","usn": "NNM24CS091","semesters": {
+      "1": {
+        "label": "1st Semester",
+        "subjects": [
+          {"code":"MA1002-1","title":"Calculus and Differential Equations","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"PH1004-1","title":"Quantum Computing and Modern Physics","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CS1001-2","title":"Problem Solving through Programming","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EC1001-1","title":"Basic Electronics","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"IS1101-1","title":"Fundamentals of Cyber Security","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"HU1001-1","title":"Technical English","credits":2,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"HU1002-1","title":"Constitution of India","credits":1,"gradePoints":10,"grade":"O","remarks":"Pass"},
+          {"code":"MA1006-1","title":"Mathematics with MATLAB","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"}
+        ]
+      },
+      "2": {
+        "label": "2nd Semester",
+        "subjects": [
+          {"code":"MA1007-1","title":"Discrete Mathematics and Transform Techniques","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CY1003-1","title":"Materials Chemistry for Computer Systems","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EC1002-2","title":"Applied Digital Logic Design","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CS1005-2","title":"Introduction to Python Programming","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EE1001-2","title":"Basic Electrical Engineering","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"BT1651-1","title":"Biology for Engineers","credits":1,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"ME1004-1","title":"Engineering Visualization","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CV1005-1","title":"Environmental Studies and Sustainability","credits":0,"gradePoints":0,"grade":"PP","remarks":"Pass"}
+        ]
+      }
+    },
+    "officialCgpa": 9.05
+  },
+
+  "NNM24CS092": {"name": "Reyansh Gupta","usn": "NNM24CS092","semesters": {
+      "1": {
+        "label": "1st Semester",
+        "subjects": [
+          {"code":"MA1002-1","title":"Calculus and Differential Equations","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"PH1004-1","title":"Quantum Computing and Modern Physics","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CS1001-2","title":"Problem Solving through Programming","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EC1001-1","title":"Basic Electronics","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"IS1101-1","title":"Fundamentals of Cyber Security","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"HU1001-1","title":"Technical English","credits":2,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"HU1002-1","title":"Constitution of India","credits":1,"gradePoints":10,"grade":"O","remarks":"Pass"},
+          {"code":"MA1006-1","title":"Mathematics with MATLAB","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"}
+        ]
+      },
+      "2": {
+        "label": "2nd Semester",
+        "subjects": [
+          {"code":"MA1007-1","title":"Discrete Mathematics and Transform Techniques","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CY1003-1","title":"Materials Chemistry for Computer Systems","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EC1002-2","title":"Applied Digital Logic Design","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CS1005-2","title":"Introduction to Python Programming","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EE1001-2","title":"Basic Electrical Engineering","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"BT1651-1","title":"Biology for Engineers","credits":1,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"ME1004-1","title":"Engineering Visualization","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CV1005-1","title":"Environmental Studies and Sustainability","credits":0,"gradePoints":0,"grade":"PP","remarks":"Pass"}
+        ]
+      }
+    },
+    "officialCgpa": 9.10
+  },
+
+  "NNM24CS093": {"name": "Ananya Rao","usn": "NNM24CS093","semesters": {
+      "1": {
+        "label": "1st Semester",
+        "subjects": [
+          {"code":"MA1002-1","title":"Calculus and Differential Equations","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"PH1004-1","title":"Quantum Computing and Modern Physics","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"CS1001-2","title":"Problem Solving through Programming","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"EC1001-1","title":"Basic Electronics","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"IS1101-1","title":"Fundamentals of Cyber Security","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"HU1001-1","title":"Technical English","credits":2,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"HU1002-1","title":"Constitution of India","credits":1,"gradePoints":10,"grade":"O","remarks":"Pass"},
+          {"code":"MA1006-1","title":"Mathematics with MATLAB","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"}
+        ]
+      },
+      "2": {
+        "label": "2nd Semester",
+        "subjects": [
+          {"code":"MA1007-1","title":"Discrete Mathematics and Transform Techniques","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CY1003-1","title":"Materials Chemistry for Computer Systems","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EC1002-2","title":"Applied Digital Logic Design","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CS1005-2","title":"Introduction to Python Programming","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EE1001-2","title":"Basic Electrical Engineering","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"BT1651-1","title":"Biology for Engineers","credits":1,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"ME1004-1","title":"Engineering Visualization","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CV1005-1","title":"Environmental Studies and Sustainability","credits":0,"gradePoints":0,"grade":"PP","remarks":"Pass"}
+        ]
+      }
+    },
+    "officialCgpa": 9.15
+  },
+
+  "NNM24CS094": {"name": "Rohan Deshmukh","usn": "NNM24CS094","semesters": {
+      "1": {
+        "label": "1st Semester",
+        "subjects": [
+          {"code":"MA1002-1","title":"Calculus and Differential Equations","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"PH1004-1","title":"Quantum Computing and Modern Physics","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"CS1001-2","title":"Problem Solving through Programming","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EC1001-1","title":"Basic Electronics","credits":3,"gradePoints":7,"grade":"B+","remarks":"Pass"},
+          {"code":"IS1101-1","title":"Fundamentals of Cyber Security","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"HU1001-1","title":"Technical English","credits":2,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"HU1002-1","title":"Constitution of India","credits":1,"gradePoints":10,"grade":"O","remarks":"Pass"},
+          {"code":"MA1006-1","title":"Mathematics with MATLAB","credits":1,"gradePoints":8,"grade":"A","remarks":"Pass"}
+        ]
+      },
+      "2": {
+        "label": "2nd Semester",
+        "subjects": [
+          {"code":"MA1007-1","title":"Discrete Mathematics and Transform Techniques","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CY1003-1","title":"Materials Chemistry for Computer Systems","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EC1002-2","title":"Applied Digital Logic Design","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"CS1005-2","title":"Introduction to Python Programming","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"EE1001-2","title":"Basic Electrical Engineering","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"BT1651-1","title":"Biology for Engineers","credits":1,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"ME1004-1","title":"Engineering Visualization","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CV1005-1","title":"Environmental Studies and Sustainability","credits":0,"gradePoints":0,"grade":"PP","remarks":"Pass"}
+        ]
+      }
+    },
+    "officialCgpa": 9.05
+  },
+
+  "NNM24CS095": {"name": "Tanishq Mehta","usn": "NNM24CS095","semesters": {
+      "1": {
+        "label": "1st Semester",
+        "subjects": [
+          {"code":"MA1002-1","title":"Calculus and Differential Equations","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"PH1004-1","title":"Quantum Computing and Modern Physics","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CS1001-2","title":"Problem Solving through Programming","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"EC1001-1","title":"Basic Electronics","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"IS1101-1","title":"Fundamentals of Cyber Security","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"HU1001-1","title":"Technical English","credits":2,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"HU1002-1","title":"Constitution of India","credits":1,"gradePoints":10,"grade":"O","remarks":"Pass"},
+          {"code":"MA1006-1","title":"Mathematics with MATLAB","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"}
+        ]
+      },
+      "2": {
+        "label": "2nd Semester",
+        "subjects": [
+          {"code":"MA1007-1","title":"Discrete Mathematics and Transform Techniques","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CY1003-1","title":"Materials Chemistry for Computer Systems","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EC1002-2","title":"Applied Digital Logic Design","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CS1005-2","title":"Introduction to Python Programming","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EE1001-2","title":"Basic Electrical Engineering","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"BT1651-1","title":"Biology for Engineers","credits":1,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"ME1004-1","title":"Engineering Visualization","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CV1005-1","title":"Environmental Studies and Sustainability","credits":0,"gradePoints":0,"grade":"PP","remarks":"Pass"}
+        ]
+      }
+    },
+    "officialCgpa": 9.10
+  },
+
+  "NNM24CS096": {"name": "Ishaan Kapoor","usn": "NNM24CS096","semesters": {
+      "1": {
+        "label": "1st Semester",
+        "subjects": [
+          {"code":"MA1002-1","title":"Calculus and Differential Equations","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"PH1004-1","title":"Quantum Computing and Modern Physics","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"CS1001-2","title":"Problem Solving through Programming","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EC1001-1","title":"Basic Electronics","credits":3,"gradePoints":7,"grade":"B+","remarks":"Pass"},
+          {"code":"IS1101-1","title":"Fundamentals of Cyber Security","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"HU1001-1","title":"Technical English","credits":2,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"HU1002-1","title":"Constitution of India","credits":1,"gradePoints":10,"grade":"O","remarks":"Pass"},
+          {"code":"MA1006-1","title":"Mathematics with MATLAB","credits":1,"gradePoints":8,"grade":"A","remarks":"Pass"}
+        ]
+      },
+      "2": {
+        "label": "2nd Semester",
+        "subjects": [
+          {"code":"MA1007-1","title":"Discrete Mathematics and Transform Techniques","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CY1003-1","title":"Materials Chemistry for Computer Systems","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EC1002-2","title":"Applied Digital Logic Design","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CS1005-2","title":"Introduction to Python Programming","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EE1001-2","title":"Basic Electrical Engineering","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"BT1651-1","title":"Biology for Engineers","credits":1,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"ME1004-1","title":"Engineering Visualization","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CV1005-1","title":"Environmental Studies and Sustainability","credits":0,"gradePoints":0,"grade":"PP","remarks":"Pass"}
+        ]
+      }
+    },
+    "officialCgpa": 9.00
+  },
+
+  "NNM24CS097": {"name": "Sanya Malhotra","usn": "NNM24CS097","semesters": {
+      "1": {
+        "label": "1st Semester",
+        "subjects": [
+          {"code":"MA1002-1","title":"Calculus and Differential Equations","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"PH1004-1","title":"Quantum Computing and Modern Physics","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CS1001-2","title":"Problem Solving through Programming","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"EC1001-1","title":"Basic Electronics","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"IS1101-1","title":"Fundamentals of Cyber Security","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"HU1001-1","title":"Technical English","credits":2,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"HU1002-1","title":"Constitution of India","credits":1,"gradePoints":10,"grade":"O","remarks":"Pass"},
+          {"code":"MA1006-1","title":"Mathematics with MATLAB","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"}
+        ]
+      },
+      "2": {
+        "label": "2nd Semester",
+        "subjects": [
+          {"code":"MA1007-1","title":"Discrete Mathematics and Transform Techniques","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CY1003-1","title":"Materials Chemistry for Computer Systems","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EC1002-2","title":"Applied Digital Logic Design","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CS1005-2","title":"Introduction to Python Programming","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EE1001-2","title":"Basic Electrical Engineering","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"BT1651-1","title":"Biology for Engineers","credits":1,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"ME1004-1","title":"Engineering Visualization","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CV1005-1","title":"Environmental Studies and Sustainability","credits":0,"gradePoints":0,"grade":"PP","remarks":"Pass"}
+        ]
+      }
+    },
+    "officialCgpa": 9.05
+  },
+
+  "NNM24CS098": {"name": "Devansh Chawla","usn": "NNM24CS098","semesters": {
+      "1": {
+        "label": "1st Semester",
+        "subjects": [
+          {"code":"MA1002-1","title":"Calculus and Differential Equations","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"PH1004-1","title":"Quantum Computing and Modern Physics","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"CS1001-2","title":"Problem Solving through Programming","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EC1001-1","title":"Basic Electronics","credits":3,"gradePoints":7,"grade":"B+","remarks":"Pass"},
+          {"code":"IS1101-1","title":"Fundamentals of Cyber Security","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"HU1001-1","title":"Technical English","credits":2,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"HU1002-1","title":"Constitution of India","credits":1,"gradePoints":10,"grade":"O","remarks":"Pass"},
+          {"code":"MA1006-1","title":"Mathematics with MATLAB","credits":1,"gradePoints":8,"grade":"A","remarks":"Pass"}
+        ]
+      },
+      "2": {
+        "label": "2nd Semester",
+        "subjects": [
+          {"code":"MA1007-1","title":"Discrete Mathematics and Transform Techniques","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CY1003-1","title":"Materials Chemistry for Computer Systems","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EC1002-2","title":"Applied Digital Logic Design","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CS1005-2","title":"Introduction to Python Programming","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EE1001-2","title":"Basic Electrical Engineering","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"BT1651-1","title":"Biology for Engineers","credits":1,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"ME1004-1","title":"Engineering Visualization","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CV1005-1","title":"Environmental Studies and Sustainability","credits":0,"gradePoints":0,"grade":"PP","remarks":"Pass"}
+        ]
+      }
+    },
+    "officialCgpa": 9.00
+  },
+
+  "NNM24CS099": {"name": "Prisha Varma","usn": "NNM24CS099","semesters": {
+      "1": {
+        "label": "1st Semester",
+        "subjects": [
+          {"code":"MA1002-1","title":"Calculus and Differential Equations","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"PH1004-1","title":"Quantum Computing and Modern Physics","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CS1001-2","title":"Problem Solving through Programming","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"EC1001-1","title":"Basic Electronics","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"IS1101-1","title":"Fundamentals of Cyber Security","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"HU1001-1","title":"Technical English","credits":2,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"HU1002-1","title":"Constitution of India","credits":1,"gradePoints":10,"grade":"O","remarks":"Pass"},
+          {"code":"MA1006-1","title":"Mathematics with MATLAB","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"}
+        ]
+      },
+      "2": {
+        "label": "2nd Semester",
+        "subjects": [
+          {"code":"MA1007-1","title":"Discrete Mathematics and Transform Techniques","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CY1003-1","title":"Materials Chemistry for Computer Systems","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EC1002-2","title":"Applied Digital Logic Design","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CS1005-2","title":"Introduction to Python Programming","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EE1001-2","title":"Basic Electrical Engineering","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"BT1651-1","title":"Biology for Engineers","credits":1,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"ME1004-1","title":"Engineering Visualization","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CV1005-1","title":"Environmental Studies and Sustainability","credits":0,"gradePoints":0,"grade":"PP","remarks":"Pass"}
+        ]
+      }
+    },
+    "officialCgpa": 9.10
+  },
+
+  "NNM24CS100": {"name": "Karan Malhotra","usn": "NNM24CS100","semesters": {
+      "1": {
+        "label": "1st Semester",
+        "subjects": [
+          {"code":"MA1002-1","title":"Calculus and Differential Equations","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"PH1004-1","title":"Quantum Computing and Modern Physics","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CS1001-2","title":"Problem Solving through Programming","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EC1001-1","title":"Basic Electronics","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"IS1101-1","title":"Fundamentals of Cyber Security","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"HU1001-1","title":"Technical English","credits":2,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"HU1002-1","title":"Constitution of India","credits":1,"gradePoints":10,"grade":"O","remarks":"Pass"},
+          {"code":"MA1006-1","title":"Mathematics with MATLAB","credits":1,"gradePoints":8,"grade":"A","remarks":"Pass"}
+        ]
+      },
+      "2": {
+        "label": "2nd Semester",
+        "subjects": [
+          {"code":"MA1007-1","title":"Discrete Mathematics and Transform Techniques","credits":4,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CY1003-1","title":"Materials Chemistry for Computer Systems","credits":4,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EC1002-2","title":"Applied Digital Logic Design","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CS1005-2","title":"Introduction to Python Programming","credits":3,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"EE1001-2","title":"Basic Electrical Engineering","credits":3,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"BT1651-1","title":"Biology for Engineers","credits":1,"gradePoints":8,"grade":"A","remarks":"Pass"},
+          {"code":"ME1004-1","title":"Engineering Visualization","credits":1,"gradePoints":9,"grade":"A+","remarks":"Pass"},
+          {"code":"CV1005-1","title":"Environmental Studies and Sustainability","credits":0,"gradePoints":0,"grade":"PP","remarks":"Pass"}
+        ]
+      }
+    },
+    "officialCgpa": 9.05
+  }
+}
+
+

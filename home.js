@@ -67,76 +67,25 @@ studentContainer.appendChild(imgDiv);
 studentContainer.appendChild(infoDiv);
 
 // Example student DB (you can extend this)
-const studentData = {
-  'NNM24CS001': {
-    name: 'Riya Sharma',
-    img: 'images/student1.png',
-    course: 'B.Tech',
-    branch: 'Computer Science',
-    semester: '3rd Semester',
-    section: 'A',
-    email: 'riya.sharma@nmamit.in',
-    phone: '+91 98765 43210',
-    attendance: '92%',
-    cgpa: '9.93',
-    sgpa: '9.95',
-    parentName: 'Mr. Rajesh Sharma',
-    parentContact: '+91 98123 45678',
-    address: 'MIG-45, Sector 12, Bangalore, Karnataka',
-    bloodGroup: 'O+'
-  },
-  'NNM24CS002': {
-    name: 'Arjun Kumar',
-    img: 'images/student1.png',
-    course: 'B.Tech',
-    branch: 'Information Technology',
-    semester: '5th Semester',
-    section: 'B',
-    email: 'arjun.kumar@nmamit.in',
-    phone: '+91 99887 76655',
-    attendance: '88%',
-    cgpa: '8.45',
-    sgpa: '8.30',
-    parentName: 'Mrs. Sunita Kumar',
-    parentContact: '+91 98234 56789',
-    address: 'House No. 23, Jayanagar, Mangalore, Karnataka',
-    bloodGroup: 'A+'
-  },
-  'NNM24CS003': {
-    name: 'Sneha Patil',
-    img: 'images/student1.png',
-    course: 'B.Tech',
-    branch: 'Electronics and Communication',
-    semester: '4th Semester',
-    section: 'C',
-    email: 'sneha.patil@nmamit.in',
-    phone: '+91 97654 32109',
-    attendance: '85%',
-    cgpa: '8.12',
-    sgpa: '7.95',
-    parentName: 'Mr. Prakash Patil',
-    parentContact: '+91 99345 67890',
-    address: 'Flat 12B, Kodialbail, Mangalore, Karnataka',
-    bloodGroup: 'B+'
-  },
-  'NNM24CS004': {
-    name: 'rajendra jogi',
-    img: 'images/student1.png',
-    course: 'B.Tech',
-    branch: 'Computer Science',
-    semester: '2nd Semester',
-    section: 'A',
-    email: 'rajendra.jogi@nmamit.in',
-    phone: '+91 96543 21098',
-    attendance: '95%',
-    cgpa: '9.10',
-    sgpa: '9.20',
-    parentName: 'Mrs. Anita Jogi',
-    parentContact: '+91 98456 78901',
-    address: 'Villa 8, Kadri Hills, Mangalore, Karnataka',
-    bloodGroup: 'AB+'
-  }
-};
+let studentData = {};
+
+// Load student JSON file
+fetch("studentData.json")
+  .then(res => res.json())
+  .then(data => {
+    studentData = data.students;
+    console.log("Students loaded:", studentData);
+
+    // If URL already has a USN, load it after JSON is ready
+    const usn = getUSNfromURL();
+    if (usn) {
+      input.value = usn;
+      renderStudent(usn);
+    }
+  })
+   .catch(err => console.error("Error loading student data:", err));
+
+
 
 // Helper to read USN from URL (?usn=...)
 function getUSNfromURL() {
@@ -165,7 +114,7 @@ function renderStudent(usnRaw) {
   }
 
   // Check if student exists
-  const data = studentData[usn];
+  const data = studentData[usn] || null;
 
   if (!data) {
     // Student not found - show error message only
@@ -206,19 +155,20 @@ function renderStudent(usnRaw) {
     <p>Branch: ${data.branch}</p>
   `;
 
-   // Action buttons (Attendance / Report)
-   // Extra-Curricular button removed as requested (was: <button class="btn student-btn extra-btn">Extra-Curricular</button>)
-   actionButtons.innerHTML = `
-    <!-- Extra-Curricular button intentionally removed -->
+  // Action buttons (Assignments / Attendance / Report)
+  actionButtons.innerHTML = `
+    <button class="btn student-btn assignment-btn">Assignments</button>
     <button class="btn student-btn attendance-btn">Attendance</button>
     <button class="btn student-btn report-btn">Report</button>
-   `;
+  `;
 
+  const assignmentBtn = actionButtons.querySelector('.assignment-btn');
   const attendanceBtn = actionButtons.querySelector('.attendance-btn');
   const reportBtn = actionButtons.querySelector('.report-btn');
 
-// Extra-Curricular button removed: no event listener needed
-
+  assignmentBtn.addEventListener('click', () => {
+    window.location.href = `assignment.html?usn=${encodeURIComponent(usn)}`;
+  });
 
   attendanceBtn.addEventListener('click', () => {
     window.location.href = `attendance.html?usn=${encodeURIComponent(usn)}`;
@@ -389,13 +339,12 @@ if (viewBtn) {
 // On page load, if ?usn= is present, auto-load that student
 document.addEventListener('DOMContentLoaded', () => {
   const usn = getUSNfromURL();
+      // Hide "Enter Student USN" button if USN is present
+      if (enterBtn) {
+        enterBtn.style.display = 'none';
+      }
     
   if (usn) {
-    // Hide "Enter Student USN" button if USN is present
-    if (enterBtn) {
-      enterBtn.style.display = 'none';
-    }
-    
     if (!document.body.contains(input)) {
       viewBtn.parentNode.insertBefore(input, viewBtn);
     }

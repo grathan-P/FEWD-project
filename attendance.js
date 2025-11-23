@@ -46,13 +46,18 @@ const subjects = [
 ];
 
 // sample data – you can extend this
-const studentAttendance = {
-  "NNM24CS001": [40, 59, 65, 26, 48, 20, 9, 11, 14],
-  "NNM24CS002": [35, 57, 61, 29, 46, 18, 7, 10, 13],
-  "NNM24CS003": [42, 55, 63, 25, 50, 22, 8, 12, 15],
-  "NNM24CS004": [44, 68, 62, 30, 52, 23, 10, 13, 14]
-};
+let studentAttendance = {};
 
+fetch("attendance.json")
+  .then(res => res.json())
+  .then(data => {
+    studentAttendance = data.attendance;
+    console.log("Students attendance loaded:", studentAttendance);
+
+    // If URL already has a attendance, load it after JSON is ready
+    loadAttendance();
+  })
+   .catch(err => console.error("Error loading student attendance data:", err));
 // ---------- Load Attendance ----------
 function loadAttendance() {
   const usn = getUSNfromURL();
