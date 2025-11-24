@@ -367,3 +367,52 @@
   }
 }
 
+.table-responsive {
+    width: 100%;
+    overflow-x: auto; /* enables scroll only if needed */
+    -webkit-overflow-scrolling: touch;
+}
+
+.attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* allows table to resize */
+}
+
+.attendance-table th,
+.attendance-table td {
+    padding: 8px 10px;
+    text-align: center;
+    word-wrap: break-word;
+    white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+
+    .attendance-container {
+        padding: 10px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .table-responsive {
+        overflow-x: hidden !important; /* REMOVE SCROLL */
+    }
+
+    .attendance-table th,
+    .attendance-table td {
+        padding: 6px;
+        font-size: 13px; /* smaller font */
+        white-space: normal; /* NOW CONTENT WRAPS */
+    }
+
+    .attendance-table {
+        display: block;
+        width: 100%;
+    }
+
+    .attendance-table tr {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* equal columns */
+    }
+}
